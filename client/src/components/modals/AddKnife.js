@@ -5,6 +5,7 @@ import styled from 'styled-components';
 function AddKnifeModal() {
 
     const[knives, setKnives] = useState([]);
+    const[noKnives, setNoKnives] = useState('');
 
     const [state, setState] = useState({
         firstname: '',
@@ -21,7 +22,10 @@ function AddKnifeModal() {
         const knivesRequest = {
             userId: '5efec25c4afd732f57f5a5f4'
         }
-        axios.post('/api/getKnives', knivesRequest).then(res => {
+        axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
+            if(res.data.knives.length < 0){
+                setNoKnives('You need to go buy some knives.');
+            }
             setKnives(res.data.knives);
         })
     })
@@ -42,9 +46,34 @@ function AddKnifeModal() {
         });
     };
 
+    const MyKnives = () => {
+        if(knives.length > 0){
+            return(
+                <div>
+                    <h1>My Knives</h1>
+                    {knives.map(knife => {
+                        return(
+                            <div>
+                                <p>{knife.brand}</p>
+                                <p>{knife.price}</p>
+                                <p>{knife.steel}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+            )
+        } else {
+            return (
+                <h4>Loading...</h4>
+            )
+        }
+    }
+
     return (
         <Wrapper>
             <Title>I am the add knife modal</Title>
+            {!noKnives && <MyKnives />}
+            {noKnives && <h3>{noKnives}</h3>}
             <input placeholder='firstname' name='firstname' onChange={(e) => onChange(e)} />
             <input placeholder='lastname' name='lastname' onChange={(e) => onChange(e)} />
             <input placeholder='email' name='email' onChange={(e) => onChange(e)} />
@@ -54,17 +83,6 @@ function AddKnifeModal() {
             <input placeholder='price' name='price' onChange={(e) => onChange(e)} />
             <input placeholder='steel' name='steel' onChange={(e) => onChange(e)} />
             <button onClick={() => handleSubmit()}>Submit</button>
-            <h1>My Knives</h1>
-            {knives.length > 0 && knives.map(knife => {
-                return(
-                    <div>
-                        <p>{knife.brand}</p>
-                        <p>{knife.price}</p>
-                        <p>{knife.steel}</p>
-                    </div>
-                )
-            })}
-
         </Wrapper>
     )
 
