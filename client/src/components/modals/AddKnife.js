@@ -64,14 +64,14 @@ function AddKnifeModal() {
             )
         } else {
             return (
-                <h4>Loading..</h4>
+                <h4>Loading...</h4>
             )
         }
     }
 
     return (
         <Wrapper>
-            <Title>I am the add knife modal thing</Title>
+            <Title>I am the add knife modal</Title>
             {!noKnives && <MyKnives />}
             {noKnives && <h3>{noKnives}</h3>}
             <input placeholder='firstname' name='firstname' onChange={(e) => onChange(e)} />
