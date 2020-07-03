@@ -12,7 +12,7 @@ if(process.env.NODE_ENV === 'production'){
     })
 }
 
-app.get('/butthole', (res, req) => {
+app.get('/butthole', (req, res) => {
     res.send('fuck you')
 })
 
