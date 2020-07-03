@@ -1,4 +1,4 @@
-# 🥾 Thru Hiker App
+# Blade X
 
 To run the project, clone it and run:
 

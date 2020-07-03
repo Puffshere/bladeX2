@@ -1,5 +1,5 @@
 {
-  "name": "thruhikefinder",
+  "name": "BladeX",
   "version": "1.0.0",
   "description": "To run the project, clone it and run:",
   "main": "server.js",
@@ -8,18 +8,7 @@
     "client": "cd client && npm start",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zachwhitedev/thruhikefinder.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zachwhitedev/thruhikefinder/issues"
-  },
-  "homepage": "https://github.com/zachwhitedev/thruhikefinder#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "prerender-node": "^3.2.5"
+    "express": "^4.17.1"
   }
 }
