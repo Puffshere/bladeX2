@@ -71,7 +71,7 @@ function AddKnifeModal() {
 
     return (
         <Wrapper>
-            <Title>I am the add knife modal</Title>
+            <Title>I am the add knife modal thing</Title>
             {!noKnives && <MyKnives />}
             {noKnives && <h3>{noKnives}</h3>}
             <input placeholder='firstname' name='firstname' onChange={(e) => onChange(e)} />
