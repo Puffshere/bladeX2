@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 function AddKnifeModal() {
 
-    const[knives, setKnives] = useState([]);
-    const[noKnives, setNoKnives] = useState('');
+    const [knives, setKnives] = useState([]);
+    const [noKnives, setNoKnives] = useState('');
 
     const [state, setState] = useState({
         firstname: '',
@@ -20,10 +20,10 @@ function AddKnifeModal() {
 
     useEffect(() => {
         const knivesRequest = {
-            userId: '5efec25c4afd732f57f5a5f4'
+            userId: '5f00047d255f07054cd8653e'
         }
         axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
-            if(res.data.knives.length < 0){
+            if (res.data.knives.length < 0) {
                 setNoKnives('You need to go buy some knives.');
             }
             setKnives(res.data.knives);
@@ -47,12 +47,12 @@ function AddKnifeModal() {
     };
 
     const MyKnives = () => {
-        if(knives.length > 0){
-            return(
+        if (knives.length > 0) {
+            return (
                 <div>
                     <h1>My Knives</h1>
                     {knives.map(knife => {
-                        return(
+                        return (
                             <div>
                                 <p>{knife.brand}</p>
                                 <p>{knife.price}</p>
@@ -70,26 +70,55 @@ function AddKnifeModal() {
     }
 
     return (
-        <Wrapper>
-            <Title>I am the add knife modal</Title>
-            {!noKnives && <MyKnives />}
-            {noKnives && <h3>{noKnives}</h3>}
-            <input placeholder='firstname' name='firstname' onChange={(e) => onChange(e)} />
-            <input placeholder='lastname' name='lastname' onChange={(e) => onChange(e)} />
-            <input placeholder='email' name='email' onChange={(e) => onChange(e)} />
-            <input placeholder='password' name='password' type='password' onChange={(e) => onChange(e)} />
-            <input placeholder='brand' name='brand' onChange={(e) => onChange(e)} />
-            <input placeholder='model' name='model' onChange={(e) => onChange(e)} />
-            <input placeholder='price' name='price' onChange={(e) => onChange(e)} />
-            <input placeholder='steel' name='steel' onChange={(e) => onChange(e)} />
-            <button onClick={() => handleSubmit()}>Submit</button>
-        </Wrapper>
+        <>
+            <Wrapper>
+                <Title>Add a Blade!</Title>
+                {/* {!noKnives && <MyKnives />} */}
+                {noKnives && <h3>{noKnives}</h3>}
+                <input placeholder='firstname' name='firstname' onChange={(e) => onChange(e)} />
+                <input placeholder='lastname' name='lastname' onChange={(e) => onChange(e)} />
+                <input placeholder='email' name='email' onChange={(e) => onChange(e)} />
+                <input placeholder='password' name='password' type='password' onChange={(e) => onChange(e)} />
+                <input placeholder='brand' name='brand' onChange={(e) => onChange(e)} />
+                <input placeholder='model' name='model' onChange={(e) => onChange(e)} />
+                <input placeholder='price' name='price' onChange={(e) => onChange(e)} />
+                <input placeholder='steel' name='steel' onChange={(e) => onChange(e)} />
+                <BTN onClick={() => handleSubmit()}>Submit</BTN>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+            </Wrapper>
+        </>
     )
 
 }
 
-const Title = styled.h4`
-    color: green;
+const Title = styled.div`
+    color: maroon;
+    text-shadow: 1px 1px 1px grey;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    font-size: 30px;
+`
+
+const BTN = styled.button`
+    text-shadow: 1px 1px 1px grey;
+    background-color: maroon;
+    margin-top: 20px;
+    color: whitesmoke;
+    float: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
+ &:hover {
+    background-color: #620000;
+    cursor: pointer
+  }
+ &:focus {
+    background-color: #3d0000;
+    cursor: pointer
+  }
+    
 `
 
 const Wrapper = styled.div`
@@ -102,6 +131,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     box-shadow: 0 0 5px gray;
     border-radius: 8px;
+    margin-top: 20px;
 `
 
 export default AddKnifeModal;
