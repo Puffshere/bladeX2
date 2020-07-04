@@ -1,0 +1,118 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:45px;
+    right:0px;
+    background-color: white;
+    font-weight:bold;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    width: 20px;
+}
+
+.mainDropStyling {
+    color: #000;
+    text-decoration: none;
+    color: maroon;
+}
+
+.mainDropStyling:hover {
+    color: rgb(46, 1, 1);
+    text-decoration: none;
+}
+
+.help {
+    padding: 8px 16px;
+    width: 130px;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(138, 138, 153, 0.9);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.help:hover {
+    background-color: #e5e5e5;
+}
+
+.knifeStyleDropdown {
+    padding: 8px 16px;
+    border-bottom: 1px solid #e5e5e5;
+    width: 130px;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(138, 138, 153, 0.9);
+    color: maroon;
+}
+
+.knifeStyleDropdown:hover {
+    background-color: #e5e5e5;
+    color: white;
+}
+
+.dropdownStyling {
+    color: maroon;
+    text-shadow: 1px 1px 1px #bbadad;
+}
+
+.dropdownStyling:hover {
+    color: rgb(53, 0, 0);
+    text-shadow: 1px 1px 1px #bbadad;
+}
+
+@media only screen and (max-width: 450px) {
+    .dropdownStyling {
+      font-size: 15px;
+    }
+}
+
+.dropdownStylingTitle {
+    font-size: 18px;
+}
+
+@media only screen and (min-width: 1020px) {
+    .dropdownStylingTitle {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .dropdownStylingTitle {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .dropdownStylingTitle {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .dropdownStylingTitle {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .dropdownStylingTitle {
+        font-size: 18px;
+    }
+}
+
+.help1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:45px;
+    right:0px;
+    font-weight:bold;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}

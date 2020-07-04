@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import AddKnifeModal from './components/modals/AddKnife';
+import AddKnifeModal from './components/AddKnife';
 
 function App(props) {
 

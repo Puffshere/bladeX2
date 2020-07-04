@@ -1,0 +1,670 @@
+html {
+    height: 100%;
+  }
+  
+  .registerPage {
+    text-align: center;
+  }
+  
+  .loginPage {
+    text-align: center;
+  }
+  
+  .loginMargins {
+    text-shadow: 2px 2px 2px white;
+    color: maroon;
+    padding-top: 70px;
+  }
+  
+  .loginPageTitle {
+    text-shadow: 2px 2px 2px white;
+    color: maroon;
+  }
+  
+  .modalTitleStyling {
+    text-shadow: 1px 1px 1px #bbadad;
+    color: maroon;
+  }
+  
+  .linkColor {
+    color: #61dafb;
+  }
+  
+  .dashboard {
+    text-align: center;
+  }
+  
+  .dashboardTitle {
+    text-shadow: .5px .5px .5px whitesmoke;
+    background-color: rgb(199, 179, 179);
+    box-shadow: 2px 2px 2px rgb(68, 65, 65);
+  } 
+  
+  .dashboardTitle1 {
+    text-shadow: .5px .5px .5px whitesmoke;
+    background-color: rgb(199, 179, 179);
+    box-shadow: 2px 2px 2px rgb(68, 65, 65);
+    margin-top: -10px;
+  }  
+  
+  .forSaleTitle {
+    text-shadow: .5px .5px .5px rgb(85, 85, 85);
+    background-color: floralwhite;
+    box-shadow: 2px 2px 2px rgb(68, 65, 65);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #bbadad;
+    color: maroon;
+  }   
+  
+  .knifePageTitle {
+    text-shadow: .5px .5px .5px whitesmoke;
+    background-color: rgb(199, 179, 179);
+    box-shadow: 2px 2px 2px rgb(68, 65, 65);
+    height: 33.5px;
+    margin-top: -16px;
+  }   
+  
+  .dashboardTableStyling {
+    margin: auto;
+    background-color: floralwhite;
+    width: 100%;
+  }
+  
+  .dashboardTableHeadStyling {
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #bbadad;
+    color: maroon;
+    height: 25px;
+  }
+    
+  .dashboardLinkStyling {
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #bbadad;
+    color: maroon;
+  }
+  
+  .dashboardLinkStyling:hover {
+    text-decoration: none;
+    color: rgb(39, 0, 0);
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .dashboardLinkStyling {
+      font-size: 15px;
+    }
+  }
+  
+  .column1 {
+  width: 10px;
+  height: 100%;
+  color: black;
+  }
+  
+  .column2 {
+    width: 10px;
+    height: 100%;
+    color: black;
+  }
+  
+  .dateStyling {
+    background-color: #a19494;
+  }
+  
+  .signOutStyling {
+    width: 75px;
+    float: right;
+    text-shadow: .5px .5px .5px whitesmoke;
+    box-shadow: 2px 2px 2px rgb(68, 65, 65);
+    color: maroon;
+    cursor: pointer;
+  }
+  
+  .signOutStyling:hover {
+    color: rgb(51, 1, 1);
+    text-decoration: none;
+  }
+  
+  .yourKnifePageTitle {
+    text-shadow: 2px 2px 2px white;
+    color: maroon;
+  }
+  
+  .addKnifeSaveButton {
+    background-color: maroon;
+    color: whitesmoke;
+  }
+  
+  .addKnifeSaveButton:hover {
+    background-color: rgb(44, 0, 0);
+  }
+  
+  .loginButton {
+    background-color: maroon;
+    color: whitesmoke;
+  }
+  
+  .loginButton:hover {
+    background-color: rgb(44, 0, 0);
+  }
+  
+  .registerButton {
+    background-color: maroon;
+    color: whitesmoke;
+  }
+  
+  .registerButton:hover {
+    background-color: rgb(44, 0, 0);
+  }
+  
+  .item {
+    font-size: 20px;
+    color: #beb7b8;
+  }
+  
+  /* -----------------table styling------------------- */
+  tr {
+    border: 1px 1px 1px maroon;
+  }
+  
+  .tableBackground {
+    background-color: #ffffff4f;
+  } 
+  
+  .shane {
+    max-width: 20px;
+    border-top: 0.125em solid #333;
+  }
+  .shane5 {
+    max-width: 20px;
+    border-top: 0.125em solid #333;
+  }
+  
+  .shane1 {
+    max-width: 20px;
+    border-top: 0.125em solid #333;
+  }
+  
+  .container {
+    font-size: 15px; 
+  }
+  
+  .tableBackground:hover {
+    background-color: #464a527c;
+  }
+  
+  .show {
+    color: maroon;
+    cursor: pointer;
+    padding-left: 15px;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .show {
+      font-size: 6px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .show {
+      font-size: 5px;
+    }
+  }
+  
+  .show:hover {
+    background-color: maroon;
+    color: whitesmoke;
+    box-shadow: #420808 
+    -1px 1px,
+    #3d0909 -2px 2px, 
+    #490909 -3px 3px,
+    #490909 -4px 4px,
+    #490808 -5px 5px, 
+    #410808 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all; 
+    transition-timing-function: line;
+  }
+  
+  .show1 {
+    color: maroon;
+    cursor: pointer;
+    padding-left: 22px;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .show1 {
+      font-size: 6px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .show1 {
+      font-size: 4px;
+    }
+  }
+  
+  .show1:hover {
+    background-color: maroon;
+    color: whitesmoke;
+    box-shadow: #420808 
+    -1px 1px,
+    #3d0909 -2px 2px, 
+    #490909 -3px 3px,
+    #490909 -4px 4px,
+    #490808 -5px 5px, 
+    #410808 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all; 
+    transition-timing-function: line;
+  }
+  
+  .show5 {
+    color: maroon;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    min-width: 30px;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .show5 {
+      font-size: 6px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .show5 {
+      font-size: 4px;
+    }
+  }
+  
+  .show5:hover {
+    background-color: maroon;
+    color: whitesmoke;
+    box-shadow: #420808 
+    -1px 1px,
+    #3d0909 -2px 2px, 
+    #490909 -3px 3px,
+    #490909 -4px 4px,
+    #490808 -5px 5px, 
+    #410808 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all; 
+    transition-timing-function: line;
+  }
+  
+  .show2 {
+    color: maroon;
+    cursor: pointer;
+    padding-left: 15px;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .show2 {
+      font-size: 6px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .show2 {
+      font-size: 4px;
+    }
+  }
+  
+  .show3 {
+    color: maroon;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .show3 {
+      font-size: 6px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .show3 {
+      font-size: 4px;
+    }
+  }
+  
+  .show3:hover {
+    background-color: maroon;
+    color: whitesmoke;
+    box-shadow: #420808 
+    -1px 1px,
+    #3d0909 -2px 2px, 
+    #490909 -3px 3px,
+    #490909 -4px 4px,
+    #490808 -5px 5px, 
+    #410808 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all; 
+    transition-timing-function: line;
+  }
+  
+  .dashTitleMargins {
+    max-width: 35px;
+  }
+  
+  
+  .showStopper {
+    height: 10px;
+    width: 90%;
+  }
+  
+  .a {
+    color: maroon;
+  }
+  
+  .forSaleTitleStyling {
+    text-decoration: underline;
+    color: rgb(95, 0, 0);
+    text-shadow: 1px 1px 1px rgb(207, 207, 207);
+  }
+  
+  .allKnivesStyling {
+    color: rgb(95, 0, 0);
+    text-shadow: 1px 1px 1px rgb(207, 207, 207);
+    margin-top: 0px;
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .allKnivesStyling {
+      font-size: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .allKnivesStyling {
+      font-size: 15px;
+    }
+  }
+  
+  .costOfcollection {
+    float: right;
+    padding-right: 95px;
+    margin-top: -40px;
+    color: maroon;
+    text-shadow: 1px 1px 1px rgb(155, 154, 154);
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .costOfcollection {
+      font-size: 10px;
+      padding-right: 65px;
+    }
+  }
+  
+  .costOfcollection1 {
+    float: right;
+    padding-right: 85px;
+    margin-top: -40px;
+    color: maroon;
+    text-shadow: 1px 1px 1px rgb(155, 154, 154);
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .costOfcollection1 {
+      font-size: 10px;
+      padding-right: 60px;
+    }
+  }
+  
+  @media only screen and (max-width: 450px) {
+    .costOfCollectNum {
+      font-size: 10px;
+    }
+  }
+  
+  .costOfCollectNum {
+    float: right;
+    padding-right: 15px;
+    margin-top: -40px;
+    color: maroon;
+    text-shadow: 1px 1px 1px rgb(131, 116, 116);
+  }
+  
+  .nice {
+    cursor: pointer;
+    padding-left: 22px;
+    background-color: #5d0909;
+    color: whitesmoke;
+    box-shadow: #420808 
+    -1px 1px,
+    #3d0909 -2px 2px, 
+    #490909 -3px 3px,
+    #490909 -4px 4px,
+    #490808 -5px 5px, 
+    #410808 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all; 
+    transition-timing-function: line;
+  }
+  
+  .styleStyling {
+    color: maroon;
+  }
+  
+  .inputStyling {
+    border: 1px 1px 1px black;
+  }
+  
+  .forSaleMargins {
+    max-width: 10px;
+  }
+  
+  /* --------------------------------checkbox------------------------------------ */
+   input[type=checkbox] {
+    visibility: hidden;
+  }
+  
+  .checkbox-example {
+    position: relative;
+  }
+  .checkbox-example label {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: -2px;
+    left: -3px;
+  }
+  
+  .checkbox-example input[type=checkbox]:checked + label {
+    left: 27px;
+  } 
+  
+  input[type=checkbox] + label {
+    display: block;
+    cursor: pointer;
+  }
+  
+  input[type=checkbox] {
+    display: none;
+  }
+  
+  input[type=checkbox] + label:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.2em;
+    transition: .2s;
+  }
+  
+  input[type=checkbox] + label:active:before {
+    transform: scale(0);
+  }
+  
+  input[type=checkbox]:checked + label:before {
+    background-color: rgb(60, 145, 179);
+    border-color: rgb(60, 145, 179);
+    border: 0.1em solid #000;
+  }
+  
+  input[type=checkbox]:disabled + label:before {
+    transform: scale(1);
+  }
+  
+  input[type=checkbox]:checked:disabled + label:before {
+    transform: scale(1);
+    background-color: rgb(60, 145, 179);
+    border-color: rgb(60, 145, 179);
+  }
+  
+  .checkMargins {
+    margin-top: -5px;
+  }
+  
+  .salt {
+    position: fixed;
+    margin-left: 125px;
+    max-height: 20px;
+  }
+  
+  .carousel-inner>.item>img {
+    /* line-height: 1; */
+    margin: auto;
+  }
+  
+  h1 {
+       margin-top: 0px;
+  }
+  
+  h3 {
+    margin-top: 0px;
+  }
+  
+  .slow {
+    min-height: 42px;
+  }
+  
+  .top {
+    margin-top: 25px;
+  }
+  
+  .top1 {
+    margin-top: 17px;
+  }
+  
+  .top8 {
+    margin-top: 0px;
+  }
+  
+  .top7 {
+    margin-top: 19px;
+  }
+  
+  .top3 {
+    margin-top: 3px;
+  }
+  
+  .top2 {
+    margin-top: 23px;
+  }
+  
+  .top5 {
+    margin-top: 28px;
+  }
+  
+  .top4 {
+    margin-top: -22px;
+  }
+  
+  .top6 {
+    margin-top: 13px;
+  }
+  
+  .hat {
+    margin-top: -10px;
+  }
+  
+  .animal {
+    background: rgba(73, 73, 82, 0.781);
+    box-shadow: 10px 10px 10px #3e3838;
+    margin-top: -27px;
+    margin-right: -36px;
+  }
+  
+  .cat {
+    text-align: center;
+    font-size: 750%;
+    text-shadow: 4px 4px 4px linen;
+    text-decoration-color: gray;
+  }
+  
+  .slang {
+    box-shadow: 10px 10px 10px linen;
+    background: linear-gradient(45deg, black, transparent);
+    border: double;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .boat {
+    text-align: center;
+    font-size: 300%;
+    text-shadow: 2px 2px 4px linen;
+    color: #a26233;
+  }
+  
+  .pop {
+  background: linear-gradient(45deg, black, transparent);
+  box-shadow: 10px 10px 10px white;
+  }
+  
+  .card-body {
+  background: linear-gradient(45deg, black, transparent);
+  box-shadow: 10px 10px 10px #3e3838;
+  }
+  
+  .space {
+  color: #041322;
+  }
+  
+  .sun {
+  color: #f36363;
+  }
+  
+  .moose {
+  color: #7d9ec1;
+  }
+  
+  .detailsStyling {
+    text-shadow: 1px 1px 1px #6a2424;
+    color: #898a99;
+  }
+  
+  .detailsStyling:hover {
+    text-shadow: 1px 1px 1px #6a2424;
+    text-decoration: none;
+    color: #f7f7f7;
+  }
+  
+  .mud {
+    margin-top: 20px;
+  }
+  
