@@ -125,7 +125,7 @@ function AddKnifeModal() {
                         <td className=''>Steel</td>
                         <td className=''>Handle</td>
                         <td className=''>Blade</td>
-                        <td className='margin1'>For Sale</td>
+                        <td className=''>Sale</td>
                     </tr>
                 </tbody>
             </table>
