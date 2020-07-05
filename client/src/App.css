@@ -19,6 +19,7 @@ html {
   .loginPageTitle {
     text-shadow: 2px 2px 2px white;
     color: maroon;
+    margin-bottom: 0px;
   }
   
   .modalTitleStyling {
@@ -111,6 +112,10 @@ html {
   .dateStyling {
     background-color: #a19494;
   }
+
+  .dateStyling2 {
+  background-color: floralwhite;
+  }
   
   .signOutStyling {
     width: 75px;
@@ -167,6 +172,11 @@ html {
   tr {
     border: 1px 1px 1px maroon;
   }
+
+  td {
+    max-width: 40px;
+    padding-left: 10px;
+  }
   
   .tableBackground {
     background-color: #ffffff4f;
@@ -190,9 +200,9 @@ html {
     font-size: 15px; 
   }
   
-  .tableBackground:hover {
+  /* .tableBackground:hover {
     background-color: #464a527c;
-  }
+  } */
   
   .show {
     color: maroon;
@@ -212,7 +222,7 @@ html {
     }
   }
   
-  .show:hover {
+  /* .show:hover {
     background-color: maroon;
     color: whitesmoke;
     box-shadow: #420808 
@@ -227,12 +237,12 @@ html {
     transition-duration: 0.4s;
     transition-property: all; 
     transition-timing-function: line;
-  }
+  } */
   
   .show1 {
     color: maroon;
     cursor: pointer;
-    padding-left: 22px;
+    padding-left: 5px;
   }
   
   @media only screen and (max-width: 450px) {
@@ -246,7 +256,7 @@ html {
       font-size: 4px;
     }
   }
-  
+/*   
   .show1:hover {
     background-color: maroon;
     color: whitesmoke;
@@ -262,7 +272,7 @@ html {
     transition-duration: 0.4s;
     transition-property: all; 
     transition-timing-function: line;
-  }
+  } */
   
   .show5 {
     color: maroon;
@@ -283,7 +293,7 @@ html {
       font-size: 4px;
     }
   }
-  
+/*   
   .show5:hover {
     background-color: maroon;
     color: whitesmoke;
@@ -300,7 +310,7 @@ html {
     transition-property: all; 
     transition-timing-function: line;
   }
-  
+   */
   .show2 {
     color: maroon;
     cursor: pointer;
@@ -338,7 +348,7 @@ html {
       font-size: 4px;
     }
   }
-  
+/*   
   .show3:hover {
     background-color: maroon;
     color: whitesmoke;
@@ -354,16 +364,15 @@ html {
     transition-duration: 0.4s;
     transition-property: all; 
     transition-timing-function: line;
-  }
+  } */
   
   .dashTitleMargins {
     max-width: 35px;
   }
   
-  
-  .showStopper {
+  .tableMargins {
     height: 10px;
-    width: 90%;
+    width: 100%;
   }
   
   .a {
@@ -438,7 +447,7 @@ html {
     text-shadow: 1px 1px 1px rgb(131, 116, 116);
   }
   
-  .nice {
+  .tableHeader {
     cursor: pointer;
     padding-left: 22px;
     background-color: #5d0909;
@@ -668,3 +677,7 @@ html {
     margin-top: 20px;
   }
   
+  .margin1 {
+   
+  }
+

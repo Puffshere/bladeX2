@@ -2,15 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import KnifeStyleDropdown from './knifeStyleDropDown';
+import './style.css';
+import Table from './table';
+import SignOut from './signOut';
+import CurrentDate from './currentDate';
 
-const CurrentDate = (props) => {
-    var tempDate = new Date();
-    var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
-    const currDate = date;
-    return (
-        <div className='dateStyling'>{currDate}</div>
-    );
-};
 
 function AddKnifeModal() {
 
@@ -25,12 +21,15 @@ function AddKnifeModal() {
         brand: '',
         model: '',
         price: 0,
-        steel: ''
+        steel: '',
+        handleMaterial: '',
+        bladeShape: '',
+        checkbox: false,
     })
 
     useEffect(() => {
         const knivesRequest = {
-            userId: '5f00047d255f07054cd8653e'
+            userId: '5f010508c7531138565af6ff'
         }
         axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
             if (res.data.knives.length < 0) {
@@ -47,6 +46,9 @@ function AddKnifeModal() {
                 console.log('successfully added new user!')
             })
             .catch(err => console.log(err, 'failed to add new user'));
+        setState({
+
+        })
     }
 
     const onChange = e => {
@@ -56,36 +58,82 @@ function AddKnifeModal() {
         });
     };
 
-    // const MyKnives = () => {
-    //     if (knives.length > 0) {
-    //         return (
-    //             <div>
-    //                 <h1>My Knives</h1>
-    //                 {knives.map(knife => {
-    //                     return (
-    //                         <div>
-    //                             <p>{knife.brand}</p>
-    //                             <p>{knife.price}</p>
-    //                             <p>{knife.steel}</p>
-    //                         </div>
-    //                     )
-    //                 })}
-    //             </div>
-    //         )
-    //     } else {
-    //         return (
-    //             <h4>Loading...</h4>
-    //         )
-    //     }
-    // }
+    const MyKnives = () => {
+        if (knives.length > 0) {
+            return (
+                <div>
+                    {knives.map(knife => {
+                        return (
+                            <div>
+                                <table className='container tableMargins'>
+                                    <thead>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className='show1 shane'>{knife.brand}</td>
+                                            <td className='show1 shane'>{knife.model}</td>
+                                            <td className='show1 shane'>${knife.price}</td>
+                                            <td className='show1 shane'>{knife.steel}</td>
+                                            <td className='show1 shane'>{knife.handleMaterial}</td>
+                                            <td className='show1 shane'>{knife.bladeShape}</td>
+                                            <td className='show2 shane forSaleMargins'>
+                                                <checkbox>
+                                                    <div class="checkbox-example checkMargins">
+                                                        <input type="checkbox" value="1" id="checkboxOneInput" />
+                                                        <label for="checkboxOneInput"></label>
+                                                    </div>
+                                                </checkbox>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table >
+                            </div>
+                        )
+                    })}
+                </div>
+            )
+        } else {
+            return (
+                <h4>Loading...</h4>
+            )
+        }
+    }
 
     return (
         <>
+            <div className='dashboard'>
+                <SignOut />
+                <div className='column1'>
+                    <h1 className='loginPageTitle'>BladeX</h1>
+                    <div className='dateStyling2'>
+                        <CurrentDate date={Date()} />
+                    </div>
+                    <h3 className='dashboardTitle'>Dashboard</h3>
+                </div>
+                <p className='costOfcollection'>Cost of Collection:  </p>
+                <p className='costOfCollectNum'>$59.99</p>
+                <Table className='tableStyling' />
+            </div>
+            <Title>My Blades</Title>
+            <br></br>
+            <table className='container tableMargins tableHeader'>
+                <tbody>
+                    <tr>
+                        <td className=''>Brand</td>
+                        <td className=''>Model</td>
+                        <td className=''>Price</td>
+                        <td className=''>Steel</td>
+                        <td className=''>Handle</td>
+                        <td className=''>Blade</td>
+                        <td className='margin1'>For Sale</td>
+                    </tr>
+                </tbody>
+            </table>
+            {!noKnives && <MyKnives />}
+            {noKnives && <h3>{noKnives}</h3>}
             <Wrapper>
                 <Title>Add a Blade!</Title>
                 <DateStyling><CurrentDate date={Date()} /></DateStyling>
-                {/* {!noKnives && <MyKnives />} */}
-                {noKnives && <h3>{noKnives}</h3>}
                 <DropdownStyling>
                     <KnifeStyleDropdown />
                 </DropdownStyling>
@@ -97,6 +145,8 @@ function AddKnifeModal() {
                 <input placeholder='model' name='model' onChange={(e) => onChange(e)} />
                 <input placeholder='price' name='price' onChange={(e) => onChange(e)} />
                 <input placeholder='steel' name='steel' onChange={(e) => onChange(e)} />
+                <input placeholder='handle material' name='handleMaterial' onChange={(e) => onChange(e)} />
+                <input placeholder='blade shape' name='bladeShape' onChange={(e) => onChange(e)} />
                 <BTN onClick={() => handleSubmit()}>Submit</BTN>
                 <br></br>
                 <br></br>
@@ -119,7 +169,7 @@ const DateStyling = styled.h5`
 
 const Title = styled.div`
     color: maroon;
-    text-shadow: 1px 1px 1px grey;
+    text-shadow: 1px 1px 1px whitesmoke;
     text-align: center;
     padding-top: 20px;
     font-size: 30px;
@@ -152,10 +202,10 @@ const Wrapper = styled.div`
     display: block;
     width: 300px;
     margin: 0 auto;
-    box-shadow: 0 0 5px gray;
+    box-shadow: 5px 5px 5px 5px #330000;
     border-radius: 8px;
     margin-top: 20px;
-    background-color: rgb(138, 138, 153);
+    background-color: floralwhite;
 `
 
 export default AddKnifeModal;

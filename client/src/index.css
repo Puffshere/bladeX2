@@ -3,10 +3,9 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0px;
-  height: 100%;
-  background: rgb(245, 245, 245);
+  /* padding: 0px; */
+  /* height: 100%; */
+  background-color: rgb(138, 138, 153);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

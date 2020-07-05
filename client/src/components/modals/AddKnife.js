@@ -15,7 +15,9 @@ function AddKnifeModal() {
         brand: '',
         model: '',
         price: 0,
-        steel: ''
+        steel: '',
+        handleMaterial: '',
+        bladeShape: '',
     })
 
     useEffect(() => {
@@ -55,8 +57,11 @@ function AddKnifeModal() {
                         return (
                             <div>
                                 <p>{knife.brand}</p>
+                                <p>{knife.model}</p>
                                 <p>{knife.price}</p>
                                 <p>{knife.steel}</p>
+                                <p>{knife.handleMaterial}</p>
+                                <p>{knife.bladeShape}</p>
                             </div>
                         )
                     })}
@@ -83,6 +88,8 @@ function AddKnifeModal() {
                 <input placeholder='model' name='model' onChange={(e) => onChange(e)} />
                 <input placeholder='price' name='price' onChange={(e) => onChange(e)} />
                 <input placeholder='steel' name='steel' onChange={(e) => onChange(e)} />
+                <input placeholder='handle material' name='handleMaterial' onChange={(e) => onChange(e)} />
+                <input placeholder='blade shape' name='bladeShape' onChange={(e) => onChange(e)} />
                 <BTN onClick={() => handleSubmit()}>Submit</BTN>
                 <br></br>
                 <br></br>

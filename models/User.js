@@ -31,6 +31,9 @@ const UserSchema = new Schema({
             handleMaterial: {
                 type: String
             },
+            bladeShape: {
+                type: String
+            },
             register_date: {
                 type: Date,
                 default: Date.now

@@ -4,7 +4,7 @@ const router = express.Router();
 const User = require('../models/User');
 
 router.post('/', (req, res) => {
-  const { firstname, lastname, email, password, brand, steel, price } = req.body;
+  const { firstname, lastname, email, password, brand, model, price, steel, handleMaterial, bladeShape } = req.body;
 
 //Simple validation
 if (!firstname || !lastname || !email || !password) {
@@ -23,8 +23,11 @@ const newUser = new User({
     knives: [
       {
         brand: brand,
+        model: model,
+        price: price,
         steel: steel,
-        price: price
+        handleMaterial: handleMaterial,
+        bladeShape: bladeShape,
       }
     ]
 });
