@@ -9,8 +9,8 @@ const Table = () => {
                 <tbody>
                     <tr><td className='border'><Dropdown /></td>
                         <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
-                        <td className='border'>EDC Rotation</td>
-                        <td className='border'>Wish List</td>
+                        <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
+                        <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td>
                     </tr>
                 </tbody>
             </table>
