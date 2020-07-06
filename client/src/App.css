@@ -200,9 +200,9 @@ html {
     font-size: 15px; 
   }
   
-  /* .tableBackground:hover {
+  .tableBackground:hover {
     background-color: #464a527c;
-  } */
+  }
   
   .show {
     color: maroon;
@@ -388,7 +388,7 @@ html {
   .allKnivesStyling {
     color: rgb(95, 0, 0);
     text-shadow: 1px 1px 1px rgb(207, 207, 207);
-    margin-top: 0px;
+    margin-top: 25px;
   }
   
   @media only screen and (max-width: 450px) {

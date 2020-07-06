@@ -8,7 +8,7 @@ import SignOut from './signOut';
 import CurrentDate from './currentDate';
 
 
-function AddKnifeModal() {
+function Dashboard() {
 
     const [knives, setKnives] = useState([]);
     const [noKnives, setNoKnives] = useState('');
@@ -27,81 +27,81 @@ function AddKnifeModal() {
         checkbox: false,
     })
 
-    // useEffect(() => {
-    //     const knivesRequest = {
-    //         userId: '5f010508c7531138565af6ff'
-    //     }
-    //     axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
-    //         if (res.data.knives.length < 0) {
-    //             setNoKnives('You need to go buy some knives.');
-    //         }
-    //         setKnives(res.data.knives);
-    //     })
-    // })
-
-    const handleSubmit = () => {
-        axios
-            .post('/api/adduser', state)
-            .then(res => {
-                console.log('successfully added new user!')
-            })
-            .catch(err => console.log(err, 'failed to add new user'));
-        setState({
-
+    useEffect(() => {
+        const knivesRequest = {
+            userId: '5f010508c7531138565af6ff'
+        }
+        axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
+            if (res.data.knives.length < 0) {
+                setNoKnives('You need to go buy some knives.');
+            }
+            setKnives(res.data.knives);
         })
-    }
+    })
 
-    const onChange = e => {
-        setState({
-            ...state,
-            [e.target.name]: e.target.value
-        });
-    };
+    // const handleSubmit = () => {
+    //     axios
+    //         .post('/api/adduser', state)
+    //         .then(res => {
+    //             console.log('successfully added new user!')
+    //         })
+    //         .catch(err => console.log(err, 'failed to add new user'));
+    //     setState({
 
-    // const MyKnives = () => {
-    //     if (knives.length > 0) {
-    //         return (
-    //             <div>
-    //                 {knives.map(knife => {
-    //                     return (
-    //                         <div>
-    //                             <table className='container tableMargins'>
-    //                                 <thead>
-    //                                 </thead>
-    //                                 <tbody>
-    //                                     <tr>
-    //                                         <td className='show1 shane'>{knife.brand}</td>
-    //                                         <td className='show1 shane'>{knife.model}</td>
-    //                                         <td className='show1 shane'>${knife.price}</td>
-    //                                         <td className='show1 shane'>{knife.steel}</td>
-    //                                         <td className='show1 shane'>{knife.handleMaterial}</td>
-    //                                         <td className='show1 shane'>{knife.bladeShape}</td>
-    //                                         <td className='show2 shane forSaleMargins'>
-    //                                             <checkbox>
-    //                                                 <div class="checkbox-example checkMargins">
-    //                                                     <input type="checkbox" value="1" id="checkboxOneInput" />
-    //                                                     <label for="checkboxOneInput"></label>
-    //                                                 </div>
-    //                                             </checkbox>
-    //                                         </td>
-    //                                     </tr>
-    //                                 </tbody>
-    //                             </table >
-    //                         </div>
-    //                     )
-    //                 })}
-    //             </div>
-    //         )
-    //     } else {
-    //         return (
-    //             <h4>Loading...</h4>
-    //         )
-    //     }
+    //     })
     // }
+
+    // const onChange = e => {
+    //     setState({
+    //         ...state,
+    //         [e.target.name]: e.target.value
+    //     });
+    // };
+
+    const MyKnives = () => {
+        if (knives.length > 0) {
+            return (
+                <div>
+                    {knives.map(knife => {
+                        return (
+                            <div>
+                                <table className='container tableMargins'>
+                                    <thead>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className='show1 shane'>{knife.brand}</td>
+                                            <td className='show1 shane'>{knife.model}</td>
+                                            <td className='show1 shane'>${knife.price}</td>
+                                            <td className='show1 shane'>{knife.steel}</td>
+                                            <td className='show1 shane'>{knife.handleMaterial}</td>
+                                            <td className='show1 shane'>{knife.bladeShape}</td>
+                                            <td className='show2 shane forSaleMargins'>
+                                                <checkbox>
+                                                    <div class="checkbox-example checkMargins">
+                                                        <input type="checkbox" value="1" id="checkboxOneInput" />
+                                                        <label for="checkboxOneInput"></label>
+                                                    </div>
+                                                </checkbox>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table >
+                            </div>
+                        )
+                    })}
+                </div>
+            )
+        } else {
+            return (
+                <h4>Loading...</h4>
+            )
+        }
+    }
 
     return (
         <>
-            {/* <div className='dashboard'>
+            <div className='dashboard'>
                 <SignOut />
                 <div className='column1'>
                     <h1 className='loginPageTitle'>BladeX</h1>
@@ -130,11 +130,8 @@ function AddKnifeModal() {
                 </tbody>
             </table>
             {!noKnives && <MyKnives />}
-            {noKnives && <h3>{noKnives}</h3>} */}
-            <Wrapper>
-                <br></br>
-                <br></br>
-                <br></br>
+            {noKnives && <h3>{noKnives}</h3>}
+            {/* <Wrapper>
                 <Title>Add a Blade!</Title>
                 <DateStyling><CurrentDate date={Date()} /></DateStyling>
                 <DropdownStyling>
@@ -155,7 +152,7 @@ function AddKnifeModal() {
                 <br></br>
                 <br></br>
                 <br></br>
-            </Wrapper>
+            </Wrapper> */}
         </>
     )
 }
@@ -211,4 +208,4 @@ const Wrapper = styled.div`
     background-color: floralwhite;
 `
 
-export default AddKnifeModal;
+export default Dashboard;
