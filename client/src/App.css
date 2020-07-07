@@ -648,29 +648,22 @@ html {
   .card-body {
   background: linear-gradient(45deg, black, transparent);
   box-shadow: 10px 10px 10px #3e3838;
+  height: 87px;
   }
   
   .space {
   color: #041322;
   }
   
-  .sun {
-  color: #f36363;
-  }
-  
-  .moose {
-  color: #7d9ec1;
-  }
-  
   .detailsStyling {
     text-shadow: 1px 1px 1px #6a2424;
-    color: #898a99;
+    color: #fafafa;
   }
   
   .detailsStyling:hover {
     text-shadow: 1px 1px 1px #6a2424;
     text-decoration: none;
-    color: #f7f7f7;
+    color: #d0cfcf;
   }
   
   .mud {

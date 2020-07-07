@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
-import KnifeStyleDropdown from './knifeStyleDropDown';
 import './style.css';
-import Table from './table';
-import SignOut from './signOut';
-import CurrentDate from './currentDate';
 import { Link } from 'react-router-dom';
 
 
@@ -40,31 +35,34 @@ function BladeDetails() {
         })
     })
 
-
-    //      const allKnivestrue = this.state.blades.filter(i => i.id === this.state.id);
-    //    const renderAllKnives = allKnivestrue.map((i) =>
     const MyKnives = () => {
-        
-            knives.map(knife => {
-                return (
-                    <div className='row'>
-                        <img className='detail col-5 mt-3 mb-3' src="knife4.jpg"></img>
-                        <div className='col-7 mt-3 mb-3'>
-                            <h2 id='title'>{knife.brand}</h2>
-                            <h2 id='title'>{knife.model}</h2>
-                            <p>Price:  ${knife.price}</p>
-                            {/* <h6 className='metascore'>For Sale Price:  ${i.forSalePrice}</h6> */}
-                            <hr></hr>
-                            <p>Steel:  {knife.steel}</p>
-                            <p>Handle Material:  {knife.handleMaterial}</p>
-                            <p>Blade Shape:  {knife.bladeShape}</p>
-                            {/* <h6 style={{ padding: 20, float: "right" }}>Knife Id: {i.id}</h6> */}
+        if (knives.length > 0) {
+            return (
+                <div>
+                    {knives.map(knife => {
+                        return (
+                            <div className='row'>
+                            <img className='detail col-5 mt-3 mb-3' src="knife4.jpg"></img>
+                            <div className='col-7 mt-3 mb-3'>
+                                <h2 id='title'>{knife.brand}</h2>
+                                <h2 id='title'>{knife.model}</h2>
+                                <p>Price:  ${knife.price}</p>
+                                <h6 className='metascore'>For Sale Price:  </h6>
+                                <hr></hr>
+                                <p>Steel:  {knife.steel}</p>
+                                <p>Handle Material:  {knife.handleMaterial}</p>
+                                <p>Blade Shape:  {knife.bladeShape}</p>
+                            </div>
                         </div>
-                    </div>
-                )
-            }
+                        )
+                    })}
+                </div>
             )
-        
+        } else {
+            return (
+                <h4>Loading...</h4>
+            )
+        }
     }
 
     return (
@@ -72,7 +70,7 @@ function BladeDetails() {
             <div className='container card mt-3 mb-3 p-0 space'>
                 <div className='card-body'>
                     <div className='container'>
-                        {MyKnives}
+                        {<MyKnives />}
                         <Link className='detailsStyling' to='/'>Return to DashBoard</Link>
                     </div>
                 </div>
@@ -80,6 +78,5 @@ function BladeDetails() {
         </div>
     )
 }
-
 
 export default BladeDetails

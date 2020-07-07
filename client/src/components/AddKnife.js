@@ -35,7 +35,6 @@ function AddKnifeModal() {
             })
             .catch(err => console.log(err, 'failed to add new user'));
         setState({
-
         })
     }
 
@@ -49,9 +48,6 @@ function AddKnifeModal() {
     return (
         <>
             <Wrapper>
-                <br></br>
-                <br></br>
-                <br></br>
                 <Title>Add a Blade!</Title>
                 <DateStyling><CurrentDate date={Date()} /></DateStyling>
                 <DropdownStyling>
@@ -91,8 +87,9 @@ const Title = styled.div`
     color: maroon;
     text-shadow: 1px 1px 1px whitesmoke;
     text-align: center;
-    padding-top: 20px;
     font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 `
 
 const BTN = styled.button`

@@ -39,13 +39,13 @@ function App() {
           <Route path='/wishList' component={WishListPage} />
           <Route path='/bladeDetails' component={BladeDetails} />
         </Switch>
-        <nav>
+        {/* <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
-        </nav>
+        </nav> */}
       </main>
     </Router>
   );

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styled from 'styled-components';
 import './style.css';
 import Table from './table';
 import SignOut from './signOut';
 import CurrentDate from './currentDate';
+import KnifeImage from './knifeImage';
 
 
 function Dashboard() {
@@ -31,17 +33,15 @@ function Dashboard() {
                     {knives.map(knife => {
                         return (
                             <div>
-                                <table className='container tableMargins'>
-                                    <thead>
-                                    </thead>
+                                <Link className='dashboardLinkStyling mainDropStyling' to='bladeDetails'><table className='container tableMargins tableBackground showStopper'>
                                     <tbody>
                                         <tr>
                                             <td className='show1 shane'>{knife.brand}</td>
-                                            <td className='show1 shane'>{knife.model}</td>
-                                            <td className='show1 shane'>${knife.price}</td>
-                                            <td className='show1 shane'>{knife.steel}</td>
-                                            <td className='show1 shane'>{knife.handleMaterial}</td>
-                                            <td className='show1 shane'>{knife.bladeShape}</td>
+                                                <td className='show1 shane'>{knife.model}</td>
+                                                <td className='show1 shane'>${knife.price}</td>
+                                                <td className='show1 shane'>{knife.steel}</td>
+                                                <td className='show1 shane'>{knife.handleMaterial}</td>
+                                                <td className='show1 shane'>{knife.bladeShape}</td>
                                             <td className='show2 shane forSaleMargins'>
                                                 <checkbox>
                                                     <div class="checkbox-example checkMargins">
@@ -53,6 +53,7 @@ function Dashboard() {
                                         </tr>
                                     </tbody>
                                 </table >
+                                </Link>
                             </div>
                         )
                     })}
@@ -68,6 +69,7 @@ function Dashboard() {
     return (
         <>
             <div className='dashboard'>
+                <KnifeImage />
                 <SignOut />
                 <div className='column1'>
                     <h1 className='loginPageTitle'>BladeX</h1>
