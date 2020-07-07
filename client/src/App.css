@@ -676,8 +676,8 @@ html {
   .mud {
     margin-top: 20px;
   }
-  
-  .margin1 {
-   
-  }
 
+  .lit {
+    margin: auto;
+    color: maroon;
+  }
