@@ -93,7 +93,7 @@ html {
   
   @media only screen and (max-width: 450px) {
     .dashboardLinkStyling {
-      font-size: 15px;
+      font-size: 11px;
     }
   }
   
@@ -544,10 +544,6 @@ html {
     border-color: rgb(60, 145, 179);
   }
   
-  .checkMargins {
-    margin-top: -5px;
-  }
-  
   .salt {
     position: fixed;
     margin-left: 125px;
@@ -556,7 +552,7 @@ html {
   
   .carousel-inner>.item>img {
     /* line-height: 1; */
-    margin: auto;
+    /* margin: auto; */
   }
   
   h1 {
@@ -695,6 +691,44 @@ html {
       margin-top: 1px;
       color: maroon;
     }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .carousel-inner {
+     margin: auto;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .carousel-inner {
+     margin-top: -17px;
+    }
+  }
+  @media only screen and (max-width: 380px) {
+    .carousel-inner {
+     margin-top: -20px;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .carousel-inner {
+     margin-top: -10px;
+    }
+  }
+  @media only screen and (max-width: 330px) {
+    .carousel-inner {
+     margin-top: -11px;
+    }
+  }
+
+  
+    .checkMargins {
+    margin-top: -5px;
+    } 
+  
+
+  @media only screen and (max-width: 420px) {
+    .checkMargins {
+    margin-top: 0px;
+    } 
   }
 
 
