@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 
-function Edc() {
+function ThumbStud() {
  const [knives, setKnives] = useState([]);
  const [noKnives, setNoKnives] = useState('');
 
@@ -24,8 +24,10 @@ function Edc() {
   })
 })
 
-    const thumbEdcTrue = knives.filter(i => i.edc === true);
-    const renderEdc = thumbEdcTrue.map((i) =>
+  
+
+    const thumbStudTrue = knives.filter(i => i.thumbStud === true);
+    const renderThumbStud = thumbStudTrue.map((i) =>
 
       <table className='container tableBackground showStopper'>
         <thead>
@@ -49,10 +51,10 @@ function Edc() {
           <div className='dateStyling'>
             <CurrentDate date={Date()} />
           </div>
-          <h3 className='dashboardTitle2'>Edc</h3>
+          <h3 className='dashboardTitle2'>ThumbStuds</h3>
         </div>
         <Table className='tableStyling' />
-        <center><h2 className='allKnivesStyling'>Edc:</h2></center>
+        <center><h2 className='allKnivesStyling'>Thumb Studs:</h2></center>
         <br></br>
         <table className='container tableMargins tableHeader'>
           <tbody>
@@ -64,10 +66,10 @@ function Edc() {
             </tr>
           </tbody>
         </table>
-        {renderEdc}
+        {renderThumbStud}
       </div>
     );
   }
 
 
-export default Edc;
+export default ThumbStud;

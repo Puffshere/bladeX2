@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import { loginUserAction } from '../actions/authenticationActions';
 // import { setCookie } from '../utils/cookies';
 
 class LoginPage extends Component {
@@ -14,13 +12,7 @@ class LoginPage extends Component {
     const data = {
       email, password
     };
-    // this.props.dispatch(loginUserAction(data));
-    // console.log(data.email,'hello');
   }
-  
-  // UNSAFE_componentDidMount() {
-  //   document.title = 'React Login';
-  // }
   
   render() {
     // let isSuccess
@@ -42,7 +34,6 @@ class LoginPage extends Component {
         <h3>Login Page</h3>
         {/* {!isSuccess ? <div> */}
           {/* {message} */}
-          {/* </div> : <Redirect to='dashboard' />} */}
         <form onSubmit={this.onHandleLogin}>
           <div>
             <label htmlFor="email">Email</label>
@@ -66,7 +57,4 @@ class LoginPage extends Component {
   }
 }
 
-
-// const mapStateToProps = (response) => ({response});
-// export default connect(mapStateToProps)(LoginPage);
 export default LoginPage;

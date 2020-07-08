@@ -4,11 +4,9 @@ import React, { Fragment } from "react";
 import "./index.css"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ForSalePage from './components/forSalePage';
-// import PrivateRoute from './privateRoute';
 import LoginPage from './components/loginPage';
 import RegisterPage from './components/registerPage';
-// import YourKnifePage from './components/yourKnifePage';
-import EDCRotationPage from './components/edcRotationPage';
+import Edc from './components/edcRotationPage';
 import WishListPage from './components/wishListPage';
 import FixedBlades from './components/fixedBladesList';
 import SlipJoints from './components/slipJoints';
@@ -17,10 +15,10 @@ import Automatics from './components/automatics';
 import Assisted from './components/assisted';
 import Dashboard from './components/dashboard';
 import BladeDetails from './components/bladeDetails';
+import ThumbStud from './components/thumbStud';
 
 
 function App() {
-
   return (
     <Router>
       <main>
@@ -35,11 +33,12 @@ function App() {
           <Route path='/automatics' component={Automatics} />
           <Route path='/assisted' component={Assisted} />
           <Route path='/addKnife' component={AddKnifeModal} />
-          <Route path='/edcRotation' component={EDCRotationPage} />
+          <Route path='/edcRotation' component={Edc} />
           <Route path='/wishList' component={WishListPage} />
           <Route path='/bladeDetails' component={BladeDetails} />
           <Route path='/loginPage' component={LoginPage} />
           <Route path='/registerPage' component={RegisterPage} />
+          <Route path='/thumbStud' component={ThumbStud} />
         </Switch>
         {/* <nav>
           <ul>

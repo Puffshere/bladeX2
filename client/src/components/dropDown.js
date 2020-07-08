@@ -43,6 +43,7 @@ class Dropdown extends React.Component {
               <a href="flippers" className='mainDropStyling dashboardLinkStyling'><li className='help'>Flippers</li></a>
               <a href="automatics" className='mainDropStyling dashboardLinkStyling'><li className='help'>Automatic</li></a>
               <a href="assisted" className='mainDropStyling dashboardLinkStyling'><li className='help'>Assisted</li></a>
+              <a href="thumbStud" className='mainDropStyling dashboardLinkStyling'><li className='help'>Thumb Stud</li></a>
               <Link className='dashboardLinkStyling mainDropStyling' to='addKnife'><li className='help'>Add Knife</li></Link>
             </ul>
           </div>

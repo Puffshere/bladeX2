@@ -1,26 +1,32 @@
-import React, { } from 'react';
 import CurrentDate from '../components/currentDate';
 import SignOut from '../components/signOut';
 import Table from '../components/table';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
-class ForSalePage extends React.Component {
-  state = {
-    blades: []
+
+
+function ForSalePage() {
+ const [knives, setKnives] = useState([]);
+ const [noKnives, setNoKnives] = useState('');
+
+
+ useEffect(() => {
+  const knivesRequest = {
+      userId: '5f0587584f6e92c4ce549a24'
   }
+  axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
+      if (res.data.knives.length < 0) {
+          setNoKnives('You need to go buy some knives.');
+      }
+      setKnives(res.data.knives);
+  })
+})
 
-  componentDidMount() {
-    fetch('http://localhost:3000/api/blades?access_token=5e3600914e63efce06c8cee3')
-      .then(res => res.json())
-      .then((data) => {
-        this.setState({ blades: data })
-      })
-      .catch(console.log)
-  }
+  
 
-  render() {
-
-    const forSaleTrue = this.state.blades.filter(i => i.forSale === true);
+    const forSaleTrue = knives.filter(i => i.forSale === true);
     const renderForSale = forSaleTrue.map((i) =>
 
       <table className='container tableBackground showStopper'>
@@ -50,7 +56,8 @@ class ForSalePage extends React.Component {
         <p className='costOfCollectNum'>$25.00</p>
         <Table className='tableStyling' />
         <center><h2 className='allKnivesStyling'>Knives for Sale:</h2></center>
-        <table className='container showStopper nice'>
+        <br></br>
+        <table className='container tableMargins tableHeader'>
           <tbody>
             <tr>
               <td className=''>Brand</td>
@@ -63,6 +70,6 @@ class ForSalePage extends React.Component {
       </div>
     );
   }
-};
+
 
 export default ForSalePage;

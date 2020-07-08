@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './../App.css';
-
-// import { registerUserAction } from '../actions/authenticationActions';
-
 class RegisterPage extends Component {
   onHandleRegistration = (event) => {
     event.preventDefault();
@@ -15,22 +12,14 @@ class RegisterPage extends Component {
     const data = {
       name, email, password
     };
-
-    // this.props.dispatch(registerUserAction(data));
-    // console.log(data.name, 'googbye');
-  
-
-  // UNSAFE_componentDidMount() {
-  //   document.title = 'React Login';
-  // }
   }
+
   render() {
   //   let message, isSuccess;
 
   //   if (this.props.response.register.hasOwnProperty('response')) {
   //     isSuccess = this.props.response.register.response.success;
   //     message = this.props.response.register.response.message;
-    
 
     return (
       <div className="registerPage">
@@ -65,11 +54,4 @@ class RegisterPage extends Component {
   }
   }
 
-
-
-// const mapStateToProps = (response) => ({
-//   response
-// });
-
-// export default connect(mapStateToProps)(RegisterPage);
 export default RegisterPage;

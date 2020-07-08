@@ -25,7 +25,7 @@ function BladeDetails() {
 
     useEffect(() => {
         const knivesRequest = {
-            userId: '5f010508c7531138565af6ff'
+            userId: '5f0587584f6e92c4ce549a24'
         }
         axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
             if (res.data.knives.length < 0) {

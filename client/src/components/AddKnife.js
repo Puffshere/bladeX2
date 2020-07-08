@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import KnifeStyleDropdown from './knifeStyleDropDown';
 import './style.css';
-import Table from './table';
-import SignOut from './signOut';
 import CurrentDate from './currentDate';
 import { Link } from 'react-router-dom';
-
 
 
 function AddKnifeModal() {
@@ -65,7 +62,7 @@ function AddKnifeModal() {
                 <input placeholder='steel' name='steel' onChange={(e) => onChange(e)} />
                 <input placeholder='handle material' name='handleMaterial' onChange={(e) => onChange(e)} />
                 <input placeholder='blade shape' name='bladeShape' onChange={(e) => onChange(e)} />
-                <BtnMargins className='row'><Link to='/'><BTN>Home</BTN></Link>
+                <BtnMargins className='row'><Link to='/'><BTN1>Home</BTN1></Link>
                 <BTN onClick={() => handleSubmit()}>Submit</BTN>
                 </BtnMargins>
                 <br></br>
@@ -105,6 +102,22 @@ const BTN = styled.button`
     margin-right: 20px;
  &:hover {
     background-color: #620000;
+    cursor: pointer
+  }
+ &:focus {
+    background-color: #3d0000;
+    cursor: pointer
+  }
+`
+const BTN1 = styled.button` 
+    background-color: darkgrey;
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    &:hover {
+    background-color: gray;
     cursor: pointer
   }
  &:focus {
