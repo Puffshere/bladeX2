@@ -6,6 +6,8 @@ import './style.css';
 import Table from './table';
 import SignOut from './signOut';
 import CurrentDate from './currentDate';
+import { Link } from 'react-router-dom';
+
 
 
 function AddKnifeModal() {
@@ -63,7 +65,9 @@ function AddKnifeModal() {
                 <input placeholder='steel' name='steel' onChange={(e) => onChange(e)} />
                 <input placeholder='handle material' name='handleMaterial' onChange={(e) => onChange(e)} />
                 <input placeholder='blade shape' name='bladeShape' onChange={(e) => onChange(e)} />
+                <BtnMargins className='row'><Link to='/'><BTN>Home</BTN></Link>
                 <BTN onClick={() => handleSubmit()}>Submit</BTN>
+                </BtnMargins>
                 <br></br>
                 <br></br>
                 <br></br>
@@ -97,7 +101,6 @@ const BTN = styled.button`
     background-color: maroon;
     margin-top: 20px;
     color: whitesmoke;
-    float: right;
     margin-bottom: 20px;
     margin-right: 20px;
  &:hover {
@@ -108,7 +111,11 @@ const BTN = styled.button`
     background-color: #3d0000;
     cursor: pointer
   }
-    
+`
+
+const BtnMargins = styled.div`
+    float: right;
+    padding-right: 20px;
 `
 
 const Wrapper = styled.div`

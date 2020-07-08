@@ -87,7 +87,7 @@ class WishList extends React.Component {
             <tr>
               <td className=''>Brand</td>
               <td className=''>Model</td>
-              <td className=''>Blade Shape</td>
+              <td className=''>Shape</td>
               <td className=''>Handle</td>
               <td className=''>Price</td>
             </tr>

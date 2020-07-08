@@ -1,41 +1,8 @@
 import React, { } from 'react';
-import { Link } from 'react-router-dom';
-import Dropdown from '../components/dropDown';
+import CurrentDate from '../components/currentDate';
+import SignOut from '../components/signOut';
+import Table from '../components/table';
 
-const CurrentDate = (props) => {
-  var tempDate = new Date();
-  var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
-  const currDate = date;
-  return (
-    <div>
-      <p className='dateStyling'>{currDate}</p>
-    </div>
-  );
-};
-
-const SignOut = (props) => {
-  return (
-    <Link to='login' className='signOutStyling'>
-      Sign Out
-    </Link>
-  )
-}
-
-const Table = () => {
-  return (
-    <div>
-      <table className='dashboardTableStyling'>
-        <tbody>
-          <tr>
-            <td className='border'><Dropdown /></td>
-            <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
-            <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
-            <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td></tr>
-        </tbody>
-      </table>
-    </div>
-  )
-}
 
 class ForSalePage extends React.Component {
   state = {
@@ -77,7 +44,7 @@ class ForSalePage extends React.Component {
           <div className='dateStyling'>
             <CurrentDate date={Date()} />
           </div>
-          <h3 className='dashboardTitle1'>ForSale</h3>
+          <h3 className='dashboardTitle2'>ForSale</h3>
         </div>
         <p className='costOfcollection'>Amount for Sale:  </p>
         <p className='costOfCollectNum'>$25.00</p>

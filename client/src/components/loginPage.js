@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { loginUserAction } from '../actions/authenticationActions';
-import { setCookie } from '../utils/cookies';
+import { Link } from 'react-router-dom';
+// import { connect } from 'react-redux';
+// import { loginUserAction } from '../actions/authenticationActions';
+// import { setCookie } from '../utils/cookies';
 
 class LoginPage extends Component {
   onHandleLogin = (event) => {
@@ -14,31 +14,35 @@ class LoginPage extends Component {
     const data = {
       email, password
     };
-    this.props.dispatch(loginUserAction(data));
-    console.log(data.email,'hello');
+    // this.props.dispatch(loginUserAction(data));
+    // console.log(data.email,'hello');
   }
   
-  UNSAFE_componentDidMount() {
-    document.title = 'React Login';
-  }
+  // UNSAFE_componentDidMount() {
+  //   document.title = 'React Login';
+  // }
   
   render() {
-    let isSuccess, message;
+    // let isSuccess
+    // , message
+    // ;
     
-    if (this.props.response.login.hasOwnProperty('response')) {
-      isSuccess = this.props.response.login.response.success;
-      message = this.props.response.login.response.message;
+    // if (this.props.response.login.hasOwnProperty('response')) {
+    //   isSuccess = this.props.response.login.response.success;
+      // message = this.props.response.login.response.message;
       
-      if (isSuccess) {
-        setCookie('token', this.props.response.login.response.token, 1);
-      }
-    }
+    //   if (isSuccess) {
+    //     setCookie('token', this.props.response.login.response.token, 1);
+    //   }
+    // }
     
     return (
       <div className='loginPage'>
         <h1 className='loginMargins'>BladeX</h1>
         <h3>Login Page</h3>
-        {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
+        {/* {!isSuccess ? <div> */}
+          {/* {message} */}
+          {/* </div> : <Redirect to='dashboard' />} */}
         <form onSubmit={this.onHandleLogin}>
           <div>
             <label htmlFor="email">Email</label>
@@ -56,11 +60,13 @@ class LoginPage extends Component {
           </div>
           <br></br>
         </form>
-        Don't have account? <Link className='linkColor' to='register'>Register here</Link>
+        Don't have account? <Link className='linkColor' to='registerPage'>Register here</Link>
       </div>
     );
   }
 }
 
-const mapStateToProps = (response) => ({response});
-export default connect(mapStateToProps)(LoginPage);
+
+// const mapStateToProps = (response) => ({response});
+// export default connect(mapStateToProps)(LoginPage);
+export default LoginPage;

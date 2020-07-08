@@ -5,8 +5,8 @@ import "./index.css"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ForSalePage from './components/forSalePage';
 // import PrivateRoute from './privateRoute';
-// import LoginPage from './components/loginPage';
-// import RegisterPage from './components/registerPage';
+import LoginPage from './components/loginPage';
+import RegisterPage from './components/registerPage';
 // import YourKnifePage from './components/yourKnifePage';
 import EDCRotationPage from './components/edcRotationPage';
 import WishListPage from './components/wishListPage';
@@ -38,6 +38,8 @@ function App() {
           <Route path='/edcRotation' component={EDCRotationPage} />
           <Route path='/wishList' component={WishListPage} />
           <Route path='/bladeDetails' component={BladeDetails} />
+          <Route path='/loginPage' component={LoginPage} />
+          <Route path='/registerPage' component={RegisterPage} />
         </Switch>
         {/* <nav>
           <ul>

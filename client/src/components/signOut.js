@@ -1,8 +1,9 @@
 import React, { } from 'react';
+import { Link } from 'react-router-dom';
 
 const SignOut = (props) => {
     return (
-        <div className='signOutStyling'>Sign Out</div>
+        <Link to='loginPage'><div className='signOutStyling'>Sign Out</div></Link>
     )
 }
 
