@@ -36,12 +36,12 @@ function Dashboard() {
                                 <Link className='dashboardLinkStyling mainDropStyling' to='bladeDetails'><table className='container tableMargins tableBackground showStopper'>
                                     <tbody>
                                         <tr>
-                                            <td className='show1 shane'>{knife.brand}</td>
-                                                <td className='show1 shane'>{knife.model}</td>
-                                                <td className='show1 shane'>${knife.price}</td>
-                                                <td className='show1 shane'>{knife.steel}</td>
-                                                <td className='show1 shane'>{knife.handleMaterial}</td>
-                                                <td className='show1 shane'>{knife.bladeShape}</td>
+                                            <td className='show1 shane leftPad'>{knife.brand}</td>
+                                            <td className='show1 shane'>{knife.model}</td>
+                                            <td className='show1 shane'>${knife.price}</td>
+                                            <td className='show1 shane'>{knife.steel}</td>
+                                            <td className='show1 shane'>{knife.handleMaterial}</td>
+                                            <td className='show1 shane'>{knife.bladeShape}</td>
                                             <td className='show2 shane forSaleMargins'>
                                                 <checkbox>
                                                     <div class="checkbox-example checkMargins">

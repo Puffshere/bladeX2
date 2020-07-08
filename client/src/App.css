@@ -550,11 +550,6 @@ html {
     max-height: 20px;
   }
   
-  .carousel-inner>.item>img {
-    /* line-height: 1; */
-    /* margin: auto; */
-  }
-  
   h1 {
        margin-top: 0px;
   }
@@ -670,7 +665,6 @@ html {
     margin: auto;
     color: maroon;
   }
-  
 
   @media only screen and (max-width: 450px) {
     .col-5 {
@@ -718,12 +712,10 @@ html {
      margin-top: -11px;
     }
   }
-
   
-    .checkMargins {
+  .checkMargins {
     margin-top: -5px;
-    } 
-  
+  } 
 
   @media only screen and (max-width: 420px) {
     .checkMargins {
@@ -731,6 +723,6 @@ html {
     } 
   }
 
-
-
-
+  .leftPad {
+    padding-left: 20px;
+  }
