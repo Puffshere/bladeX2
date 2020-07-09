@@ -42,18 +42,18 @@ function BladeDetails() {
                     {knives.map(knife => {
                         return (
                             <div className='row'>
-                            <img className='detail col-5 mt-3 mb-3' src="knife4.jpg"></img>
-                            <div className='col-7 mt-3 mb-3'>
-                                <h2 className='title'>{knife.brand}</h2>
-                                <h2 className='title'>{knife.model}</h2>
-                                <p>Price:  ${knife.price}</p>
-                                <h6 className='metascore'>For Sale Price:  </h6>
-                                <hr></hr>
-                                <p>Steel:  {knife.steel}</p>
-                                <p>Handle Material:  {knife.handleMaterial}</p>
-                                <p>Blade Shape:  {knife.bladeShape}</p>
+                                <img className='detail col-5 mt-3 mb-3' src="knife4.jpg"></img>
+                                <div className='col-7 mt-3 mb-3'>
+                                    <h2 className='title'>{knife.brand}</h2>
+                                    <h2 className='title'>{knife.model}</h2>
+                                    <p>Price:  ${knife.price}</p>
+                                    <h6 className='metascore'>For Sale Price:  </h6>
+                                    <hr></hr>
+                                    <p>Steel:  {knife.steel}</p>
+                                    <p>Handle Material:  {knife.handleMaterial}</p>
+                                    <p>Blade Shape:  {knife.bladeShape}</p>
+                                </div>
                             </div>
-                        </div>
                         )
                     })}
                 </div>

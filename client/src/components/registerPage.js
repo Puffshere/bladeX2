@@ -1,57 +1,69 @@
-import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './../App.css';
-class RegisterPage extends Component {
-  onHandleRegistration = (event) => {
-    event.preventDefault();
+import React, { useState } from 'react';
+import axios from 'axios';
 
-    let name = event.target.name.value;
-    let email = event.target.email.value;
-    let password = event.target.password.value;
+function RegisterPage() {
 
-    const data = {
-      name, email, password
-    };
+  const [state, setState] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: '',
+  })
+
+  const handleSubmit = () => {
+    axios
+      .post('/api/adduser', state)
+      .then(res => {
+        console.log('successfully added new user!')
+      })
+      .catch(err => console.log(err, 'failed to add new user'));
+    setState({
+    })
   }
 
-  render() {
-  //   let message, isSuccess;
+  const onChange = e => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value
+    });
+  };
 
-  //   if (this.props.response.register.hasOwnProperty('response')) {
-  //     isSuccess = this.props.response.register.response.success;
-  //     message = this.props.response.register.response.message;
-
-    return (
-      <div className="registerPage">
-        <h1 className='loginMargins'>BladeX</h1>
-        <h3>RegisterPage</h3>
-        {/* {!isSuccess ? <div>{message}</div> : <Redirect to='login' />} */}
-        <form onSubmit={this.onHandleRegistration}>
-          <div>
-            <label htmlFor="name">Name</label>
-            <br></br>
-            <input type="text" name="name" id="name" />
-          </div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <br></br>
-            <input type="email" name="email" id="email" />
-          </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <br></br>
-            <input type="password" name="password" id="password" />
-          </div>
+  return (
+    <div className="registerPage">
+      <h1 className='loginMargins'>BladeX</h1>
+      <h3>RegisterPage</h3>
+      <form>
+        <div>
+          <label htmlFor="firstname">First Name</label>
           <br></br>
-          <div>
-            <button className='registerButton'>Register</button>
-          </div>
+          <input type="text" name="firstname" id="firstname" onChange={(e) => onChange(e)} />
+        </div>
+        <div>
+          <label htmlFor="lastname">Last Name</label>
           <br></br>
-        </form>
+          <input type="text" name="lastname" id="Lastname" onChange={(e) => onChange(e)} />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <br></br>
+          <input type="email" name="email" id="email" onChange={(e) => onChange(e)} />
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <br></br>
+          <input type="password" name="password" id="password" onChange={(e) => onChange(e)} />
+        </div>
+        <br></br>
+        <div>
+          <button onClick={() => handleSubmit()} className='registerButton'>Register</button>
+        </div>
+        <br></br>
+      </form>
         Already have account? <Link className='linkColor' to='loginPage'>Login here</Link>
-      </div>
-    )
-  }
-  }
+    </div>
+  )
+}
 
 export default RegisterPage;

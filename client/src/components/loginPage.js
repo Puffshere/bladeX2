@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-// import { setCookie } from '../utils/cookies';
+import { Link, Redirect } from 'react-router-dom';
+
 
 class LoginPage extends Component {
+  
   onHandleLogin = (event) => {
     event.preventDefault();
 
@@ -15,25 +16,11 @@ class LoginPage extends Component {
   }
   
   render() {
-    // let isSuccess
-    // , message
-    // ;
-    
-    // if (this.props.response.login.hasOwnProperty('response')) {
-    //   isSuccess = this.props.response.login.response.success;
-      // message = this.props.response.login.response.message;
-      
-    //   if (isSuccess) {
-    //     setCookie('token', this.props.response.login.response.token, 1);
-    //   }
-    // }
-    
+     
     return (
       <div className='loginPage'>
         <h1 className='loginMargins'>BladeX</h1>
         <h3>Login Page</h3>
-        {/* {!isSuccess ? <div> */}
-          {/* {message} */}
         <form onSubmit={this.onHandleLogin}>
           <div>
             <label htmlFor="email">Email</label>

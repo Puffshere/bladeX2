@@ -34,11 +34,11 @@ function AddKnifeModal() {
 
     const handleSubmit = () => {
         axios
-            .post('/api/adduser', state)
+            .post('/api/addNewKnife', state)
             .then(res => {
-                console.log('successfully added new user!')
+                console.log('successfully added new knife!')
             })
-            .catch(err => console.log(err, 'failed to add new user'));
+            .catch(err => console.log(err, 'failed to add new knife'));
         setState({
         })
     }
@@ -49,7 +49,7 @@ function AddKnifeModal() {
             [e.target.name]: e.target.value
         });
     };
-    
+
     return (
         <>
             <Wrapper>
@@ -58,10 +58,6 @@ function AddKnifeModal() {
                 <DropdownStyling>
                     <KnifeStyleDropdown />
                 </DropdownStyling>
-                <input placeholder='firstname' name='firstname' onChange={(e) => onChange(e)} />
-                <input placeholder='lastname' name='lastname' onChange={(e) => onChange(e)} />
-                <input placeholder='email' name='email' onChange={(e) => onChange(e)} />
-                <input placeholder='password' name='password' type='password' onChange={(e) => onChange(e)} />
                 <input placeholder='brand' name='brand' onChange={(e) => onChange(e)} />
                 <input placeholder='model' name='model' onChange={(e) => onChange(e)} />
                 <input placeholder='price' name='price' onChange={(e) => onChange(e)} />
@@ -69,7 +65,7 @@ function AddKnifeModal() {
                 <input placeholder='handle material' name='handleMaterial' onChange={(e) => onChange(e)} />
                 <input placeholder='blade shape' name='bladeShape' onChange={(e) => onChange(e)} />
                 <BtnMargins className='row'><Link to='/'><BTN1>Home</BTN1></Link>
-                <BTN onClick={() => handleSubmit()}>Submit</BTN>
+                    <BTN onClick={() => handleSubmit()}>Submit</BTN>
                 </BtnMargins>
                 <br></br>
                 <br></br>
