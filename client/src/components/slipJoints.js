@@ -1,59 +1,32 @@
-import React, { } from 'react';
-import { Link } from 'react-router-dom';
-import Dropdown from '../components/dropDown';
+import CurrentDate from '../components/currentDate';
+import SignOut from '../components/signOut';
+import Table from '../components/table';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const CurrentDate = (props) => {
-  var tempDate = new Date();
-  var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
-  const currDate = date;
-  return (
-    <div>
-      <p className='dateStyling'>{currDate}</p>
-    </div>
-  );
-};
 
-const SignOut = (props) => {
-  return (
-    <Link to='login' className='signOutStyling'>
-      Sign Out
-    </Link>
-  )
-}
 
-const Table = () => {
-  return (
-    <div>
-      <table className='dashboardTableStyling'>
-        <tbody>
-          <tr><td className='border'><Dropdown /></td>
-            <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
-            <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
-            <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td></tr>
-        </tbody>
-      </table>
-    </div>
-  )
-}
 
-class SlipJoints extends React.Component {
-  state = {
-    blades: []
+function SlipJoints() {
+
+ const [knives, setKnives] = useState([]);
+ const [noKnives, setNoKnives] = useState('');
+
+
+ useEffect(() => {
+  const knivesRequest = {
+      userId: '5f0587584f6e92c4ce549a24'
   }
+  axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
+      if (res.data.knives.length < 0) {
+          setNoKnives('You need to go buy some knives.');
+      }
+      setKnives(res.data.knives);
+  })
+})
 
-  componentDidMount() {
-    fetch('http://localhost:3000/api/blades?access_token=5e3600914e63efce06c8cee3')
-      .then(res => res.json())
-      .then((data) => {
-        this.setState({ blades: data })
-      })
-      .catch(console.log)
-  }
-
-  render() {
-
-    const slipJointtrue = this.state.blades.filter(i => i.slipJoint === true);
-    const renderSlipJoints = slipJointtrue.map((i) =>
+    const slipJointsTrue = knives.filter(i => i.slipJoints === true);
+    const renderSlipJoints = slipJointsTrue.map((i) =>
 
       <table className='container tableBackground showStopper'>
         <thead>
@@ -63,7 +36,6 @@ class SlipJoints extends React.Component {
             <td className='show1 shane'>{i.brand}</td>
             <td className='show1 shane'>{i.model}</td>
             <td className='show1 shane'>{i.bladeShape}</td>
-            <td className='show1 shane'>{i.steel}</td>
             <td className='show1 shane'>{i.handleMaterial}</td>
           </tr>
         </tbody>
@@ -78,17 +50,17 @@ class SlipJoints extends React.Component {
           <div className='dateStyling'>
             <CurrentDate date={Date()} />
           </div>
-          <h3 className='dashboardTitle1'>SlipJoints</h3>
+          <h3 className='dashboardTitle2'>SlipJoints</h3>
         </div>
         <Table className='tableStyling' />
         <center><h2 className='allKnivesStyling'>Slip Joints:</h2></center>
-        <table className='container showStopper nice'>
+        <br></br>
+        <table className='container tableMargins tableHeader'>
           <tbody>
             <tr>
               <td className=''>Brand</td>
               <td className=''>Model</td>
-              <td className=''>Blade Shape</td>
-              <td className=''>Steel</td>
+              <td className=''>Blade</td>
               <td className=''>Handle</td>
             </tr>
           </tbody>
@@ -97,6 +69,6 @@ class SlipJoints extends React.Component {
       </div>
     );
   }
-};
+
 
 export default SlipJoints;

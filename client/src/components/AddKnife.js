@@ -24,6 +24,12 @@ function AddKnifeModal() {
         handleMaterial: '',
         bladeShape: '',
         checkbox: false,
+        fixedBlade: false,
+        slipJoint: false,
+        flipper: false,
+        automatic: false,
+        assisted: false,
+        thumbStud: false,
     })
 
     const handleSubmit = () => {
@@ -43,7 +49,7 @@ function AddKnifeModal() {
             [e.target.name]: e.target.value
         });
     };
-
+    
     return (
         <>
             <Wrapper>

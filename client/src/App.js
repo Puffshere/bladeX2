@@ -7,7 +7,7 @@ import ForSalePage from './components/forSalePage';
 import LoginPage from './components/loginPage';
 import RegisterPage from './components/registerPage';
 import Edc from './components/edcRotationPage';
-import WishListPage from './components/wishListPage';
+import WishList from './components/wishListPage';
 import FixedBlades from './components/fixedBladesList';
 import SlipJoints from './components/slipJoints';
 import Flippers from './components/flippers';
@@ -34,7 +34,7 @@ function App() {
           <Route path='/assisted' component={Assisted} />
           <Route path='/addKnife' component={AddKnifeModal} />
           <Route path='/edcRotation' component={Edc} />
-          <Route path='/wishList' component={WishListPage} />
+          <Route path='/wishList' component={WishList} />
           <Route path='/bladeDetails' component={BladeDetails} />
           <Route path='/loginPage' component={LoginPage} />
           <Route path='/registerPage' component={RegisterPage} />

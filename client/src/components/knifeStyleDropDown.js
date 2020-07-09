@@ -10,8 +10,6 @@ class KnifeStyleDropdown extends React.Component {
         this.state = {
             brand: props.brand,
             model: props.model,
-        }
-        this.state = {
             displayMenu: false,
             displayStyle: false,
             style: "",
