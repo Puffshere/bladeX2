@@ -10,7 +10,6 @@ function Automatics() {
   const [knives, setKnives] = useState([]);
   const [noKnives, setNoKnives] = useState('');
 
-
   useEffect(() => {
     const knivesRequest = {
       userId: '5f0587584f6e92c4ce549a24'

@@ -37,7 +37,6 @@ class Dropdown extends React.Component {
           <div className='help1'>
             <ul>
               <Link className='dashboardLinkStyling mainDropStyling' to='/'><li className='help'>Dashboard</li></Link>
-              {/* <a href="dashboard" className='mainDropStyling dashboardLinkStyling'><li className='help'>Dashboard</li></a> */}
               <a href="fixedBlades" className='mainDropStyling dashboardLinkStyling'><li className='help'>Fixed Blades</li></a>
               <a href="slipJoints" className='mainDropStyling dashboardLinkStyling'><li className='help'>Slip Joints</li></a>
               <a href="flippers" className='mainDropStyling dashboardLinkStyling'><li className='help'>Flippers</li></a>

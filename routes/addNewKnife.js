@@ -6,7 +6,6 @@ const User = require('../models/User');
 router.post('/', (req, res) => {
   const { firstname, lastname, email, password, brand, model, price, steel, handleMaterial, bladeShape } = req.body;
 
-  //Check for existing user
   User.findOne({ email }).then(user => {
     if (user) return res.status(400).json({ msg: 'User already exists' });
 
