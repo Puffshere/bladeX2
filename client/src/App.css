@@ -399,16 +399,22 @@ html {
   
   .costOfcollection {
     float: right;
-    padding-right: 95px;
-    margin-top: -40px;
+    padding-right: 65px;
+    margin-top: -25px;
     color: maroon;
     text-shadow: 1px 1px 1px rgb(155, 154, 154);
   }
   
+  @media only screen and (max-width: 1024px) {
+    .costOfcollection {
+      font-size: 10px;
+      /* padding-right: 65px; */
+    }
+  }
   @media only screen and (max-width: 450px) {
     .costOfcollection {
       font-size: 10px;
-      padding-right: 65px;
+      padding-right: 50px;
     }
   }
   
@@ -436,7 +442,7 @@ html {
   .costOfCollectNum {
     float: right;
     padding-right: 15px;
-    margin-top: -40px;
+    margin-top: -25px;
     color: maroon;
     text-shadow: 1px 1px 1px rgb(131, 116, 116);
   }
