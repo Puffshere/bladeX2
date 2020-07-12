@@ -139,8 +139,8 @@ html {
   
   .nameLoggedInStyling {
     float: right;
-    text-shadow: .5px .5px .5px rgb(94, 86, 86);
-    color: #07324b;
+    text-shadow: .5px .5px .5px rgb(0, 0, 0);
+    color: rgb(60, 145, 179);
     padding-right: 10px;
   }
 

@@ -26,5 +26,4 @@ function NameLoggedIn() {
         
 }
 
-
 export default NameLoggedIn;

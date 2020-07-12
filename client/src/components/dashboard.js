@@ -68,31 +68,32 @@ function Dashboard() {
     //     }
     // }
     //   const thumbStudTrue = knives.filter(i => i.thumbStud === true);
+    
     const MyKnives = knives.map((i) =>
-            <table className='container tableBackground showStopper'>
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-            <Link className='linkMargins' to='bladeDetails'>
+        <table className='container tableBackground showStopper'>
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <Link className='linkMargins' to='bladeDetails'>
                         <td className='show1 dMargins'>{i.brand}</td>
                         <td className='show1 dMargins'>{i.model}</td>
                         <td className='show1 dMargins'>{i.price}</td>
                         <td className='show1 dMargins'>{i.steel}</td>
                         <td className='show1 dMargins'>{i.handleMaterial}</td>
                         <td className='show1 dMargins'>{i.bladeShape}</td>
-        </Link>
-                        <td className='show2'>
-                            <checkbox>
-                                <div class="checkbox-example checkMargins">
-                                    <input type="checkbox" value="1" id="checkboxOneInput" />
-                                    <label for="checkboxOneInput"></label>
-                                </div>
-                            </checkbox>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                    </Link>
+                    <td className='show2'>
+                        <checkbox>
+                            <div class="checkbox-example checkMargins">
+                                <input type="checkbox" value="1" id="checkboxOneInput" />
+                                <label for="checkboxOneInput"></label>
+                            </div>
+                        </checkbox>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     );
 
     return (
