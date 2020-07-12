@@ -840,3 +840,28 @@ html {
     padding-left: 20px;
     max-width: 45px;
   }
+
+  a {
+    color: maroon;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(82, 0, 0);
+    text-decoration: none;
+  }
+  a:focus {
+    color: rgb(46, 0, 0);
+    text-decoration: none;
+  }
+
+.homeStyling {
+background-color: whitesmoke;
+}
+
+.aboutStyling {
+background-color: whitesmoke;
+}
+
+.contactStyling {
+background-color: whitesmoke;
+}

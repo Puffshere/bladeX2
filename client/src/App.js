@@ -40,13 +40,16 @@ function App() {
           <Route path='/registerPage' component={RegisterPage} />
           <Route path='/thumbStud' component={ThumbStud} />
         </Switch>
-        {/* <nav>
+        <nav>
+          <br></br>
+          <br></br>
+          <br></br>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li className='homeStyling'><Link to="/">Home</Link></li>
+            <li className='aboutStyling'><Link to="/about">About</Link></li>
+            <li className='contactStyling'><Link to="/contact">Contact</Link></li>
           </ul>
-        </nav> */}
+        </nav>
       </main>
     </Router>
   );
@@ -61,6 +64,7 @@ const Home = () => (
 const About = () => (
   <Fragment>
     <h1>About</h1>
+    <h5>This is an app to help you track your knife collection.  Manage your inventory.  Track costs and sell your blades.</h5>
   </Fragment>
 );
 
