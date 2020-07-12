@@ -137,6 +137,13 @@ html {
     text-decoration: none;
   }
   
+  .nameLoggedInStyling {
+    float: right;
+    text-shadow: .5px .5px .5px rgb(94, 86, 86);
+    color: #07324b;
+    padding-right: 10px;
+  }
+
   .yourKnifePageTitle {
     text-shadow: 2px 2px 2px white;
     color: maroon;
@@ -223,7 +230,7 @@ html {
     }
   }
   
-  /* .show:hover {
+  .show:hover {
     background-color: maroon;
     color: whitesmoke;
     box-shadow: #420808 
@@ -238,7 +245,7 @@ html {
     transition-duration: 0.4s;
     transition-property: all; 
     transition-timing-function: line;
-  } */
+  }
   
   .show1 {
     color: maroon;
@@ -257,8 +264,10 @@ html {
       font-size: 9px;
     }
   }
-/*   
+  
   .show1:hover {
+    padding-left: 18.5px;
+    padding-right: 18.5px;
     background-color: maroon;
     color: whitesmoke;
     box-shadow: #420808 
@@ -273,7 +282,7 @@ html {
     transition-duration: 0.4s;
     transition-property: all; 
     transition-timing-function: line;
-  } */
+  }
   
   .show5 {
     color: maroon;
@@ -294,7 +303,7 @@ html {
       font-size: 4px;
     }
   }
-/*   
+  
   .show5:hover {
     background-color: maroon;
     color: whitesmoke;
@@ -311,24 +320,8 @@ html {
     transition-property: all; 
     transition-timing-function: line;
   }
-   */
-  .show2 {
-    color: maroon;
-    cursor: pointer;
-    padding-left: 15px;
-  }
   
-  @media only screen and (max-width: 450px) {
-    .show2 {
-      font-size: 6px;
-    }
-  }
-  
-  @media only screen and (max-width: 350px) {
-    .show2 {
-      font-size: 4px;
-    }
-  }
+
   
   .show3 {
     color: maroon;
@@ -349,7 +342,7 @@ html {
       font-size: 4px;
     }
   }
-/*   
+  
   .show3:hover {
     background-color: maroon;
     color: whitesmoke;
@@ -365,7 +358,7 @@ html {
     transition-duration: 0.4s;
     transition-property: all; 
     transition-timing-function: line;
-  } */
+  }
   
   .dashTitleMargins {
     max-width: 35px;
@@ -667,6 +660,11 @@ html {
     color: maroon;
   }
 
+  .title {
+    color: maroon;
+    text-shadow: 1px 1px 1px black;
+  }
+
   @media only screen and (max-width: 450px) {
     .col-5 {
       flex: 0 0 41.666667%; 
@@ -728,4 +726,111 @@ html {
     padding-left: 20px;
   }
 
+
+
+
+  @media only screen and (max-width: 1024px) {
+    .dMargins {
+      padding-left: 70px;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .dMargins {
+      padding-left: 37px;
+    }
+  }
+  @media only screen and (max-width: 775px) {
+    .dMargins {
+      padding-left: 35px;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .dMargins {
+      padding-left: 17px;
+    }
+  }
+  @media only screen and (max-width: 380px) {
+    .dMargins {
+      padding-left: 13px;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .dMargins {
+      padding-left: 10px;
+    }
+  }
+  @media only screen and (max-width: 330px) {
+    .dMargins {
+      padding-left: 10px;
+    }
+  }
+
+
+  .show2 {
+    color: maroon;
+    cursor: pointer;
+    padding-right: 70px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .show2 {
+      padding-right: 100px;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .show2 {
+      padding-right: 70px;
+    }
+  }
+  @media only screen and (max-width: 775px) {
+    .show2 {
+      padding-right: 85px;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .show2 {
+      padding-right: 40px;
+      font-size: 8px;
+    }
+  }
+  @media only screen and (max-width: 380px) {
+    .show2 {
+      padding-right: 37px;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .show2 {
+      padding-right: 35px;
+      font-size: 8px;
+    }
+  }
+  @media only screen and (max-width: 330px) {
+    .show2 {
+      padding-right: 20px;
+    }
+  }
+
+
+ 
   
+ 
+
+
+
+
+
+
+
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .handleStyling {
+    max-width: 30px;
+  }
+
+  .brandMargins {
+    padding-left: 20px;
+    max-width: 45px;
+  }

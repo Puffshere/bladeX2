@@ -7,6 +7,7 @@ import Table from './table';
 import SignOut from './signOut';
 import CurrentDate from './currentDate';
 import KnifeImage from './knifeImage';
+import NameLoggedIn from './nameLoggedIn';
 
 
 function Dashboard() {
@@ -26,51 +27,80 @@ function Dashboard() {
         })
     })
 
-    const MyKnives = () => {
-        if (knives.length > 0) {
-            return (
-                <div>
-                    {knives.map(knife => {
-                        return (
-                            <div>
-                                <Link className='dashboardLinkStyling mainDropStyling' to='bladeDetails'><table className='container tableMargins tableBackground showStopper'>
-                                    <tbody>
-                                        <tr>
-                                            <td className='show1 shane'>{knife.brand}</td>
-                                            <td className='show1 shane'>{knife.model}</td>
-                                            <td className='show1 shane'>${knife.price}</td>
-                                            <td className='show1 shane'>{knife.steel}</td>
-                                            <td className='show1 shane'>{knife.handleMaterial}</td>
-                                            <td className='show1 shane'>{knife.bladeShape}</td>
-                                            <td className='show2 shane forSaleMargins'>
-                                                <checkbox>
-                                                    <div class="checkbox-example checkMargins">
-                                                        <input type="checkbox" value="1" id="checkboxOneInput" />
-                                                        <label for="checkboxOneInput"></label>
-                                                    </div>
-                                                </checkbox>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table >
-                                </Link>
-                            </div>
-                        )
-                    })}
-                </div>
-            )
-        } else {
-            return (
-                <h4>Loading...</h4>
-            )
-        }
-    }
+    // const MyKnives = () => {
+    //     if (knives.length > 0) {
+    //         return (
+    //             <div>
+    //                 {knives.map(knife => {
+    //                     return (
+    //                         <div>
+    //                             <Link className='dashboardLinkStyling mainDropStyling' to='bladeDetails'>
+    //                                 <table className='container tableMargins tableBackground showStopper'>
+    //                                     <tbody>
+    //                                         <tr>
+    //                                             <td className='show1 shane'>{knife.brand}</td>
+    //                                             <td className='show1 shane'>{knife.model}</td>
+    //                                             <td className='show1 shane'>${knife.price}</td>
+    //                                             <td className='show1 shane'>{knife.steel}</td>
+    //                                             <td className='show1 shane'>{knife.handleMaterial}</td>
+    //                                             <td className='show1 shane'>{knife.bladeShape}</td>
+    //                                             <td className='show2 shane forSaleMargins'>
+    //                                                 <checkbox>
+    //                                                     <div class="checkbox-example checkMargins">
+    //                                                         <input type="checkbox" value="1" id="checkboxOneInput" />
+    //                                                         <label for="checkboxOneInput"></label>
+    //                                                     </div>
+    //                                                 </checkbox>
+    //                                             </td>
+    //                                         </tr>
+    //                                     </tbody>
+    //                                 </table >
+    //                             </Link>
+    //                         </div>
+    //                     )
+    //                 })}
+    //             </div>
+    //         )
+    //     } else {
+    //         return (
+    //             <h4>Loading...</h4>
+    //         )
+    //     }
+    // }
+    //   const thumbStudTrue = knives.filter(i => i.thumbStud === true);
+    const MyKnives = knives.map((i) =>
+            <table className='container tableBackground showStopper'>
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+            <Link className='linkMargins' to='bladeDetails'>
+                        <td className='show1 dMargins'>{i.brand}</td>
+                        <td className='show1 dMargins'>{i.model}</td>
+                        <td className='show1 dMargins'>{i.price}</td>
+                        <td className='show1 dMargins'>{i.steel}</td>
+                        <td className='show1 dMargins'>{i.handleMaterial}</td>
+                        <td className='show1 dMargins'>{i.bladeShape}</td>
+        </Link>
+                        <td className='show2'>
+                            <checkbox>
+                                <div class="checkbox-example checkMargins">
+                                    <input type="checkbox" value="1" id="checkboxOneInput" />
+                                    <label for="checkboxOneInput"></label>
+                                </div>
+                            </checkbox>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    );
 
     return (
         <>
             <div className='dashboard'>
                 <KnifeImage />
                 <SignOut />
+                <NameLoggedIn />
                 <div className='column1'>
                     <h1 className='loginPageTitle'>BladeX</h1>
                     <div className='dateStyling2'>
@@ -87,18 +117,18 @@ function Dashboard() {
             <table className='container tableMargins tableHeader'>
                 <tbody>
                     <tr>
-                        <td className=''>Brand</td>
+                        <td className='brandMargins'>Brand</td>
                         <td className=''>Model</td>
                         <td className=''>Price</td>
                         <td className=''>Steel</td>
-                        <td className=''>Handle</td>
+                        <td className='handleStyling'>Handle</td>
                         <td className=''>Blade</td>
                         <td className=''>Sale</td>
                     </tr>
                 </tbody>
             </table>
-            {!noKnives && <MyKnives />}
-            {noKnives && <h3>{noKnives}</h3>}
+            {MyKnives}
+
         </>
     )
 }
