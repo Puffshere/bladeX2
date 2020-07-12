@@ -250,7 +250,7 @@ html {
   .show1 {
     color: maroon;
     cursor: pointer;
-    padding-left: 5px;
+    padding-left: 65px;
   }
   
   @media only screen and (max-width: 450px) {
