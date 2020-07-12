@@ -71,6 +71,7 @@ const About = () => (
 const Contact = () => (
   <Fragment>
     <h1>Contact</h1>
+    <h5>Contact me at:  shawncurtistaylor@hotmail.com</h5>
   </Fragment>
 );
 
