@@ -883,7 +883,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 60px;
+  font-size: 50px;
 }
                   @media only screen and (max-width: 1024px) {
                     .heroText {
@@ -913,7 +913,7 @@ html {
   box-shadow: 2px 2px 2px rgb(68, 65, 65);
   color: maroon;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .signInStyling:hover {
