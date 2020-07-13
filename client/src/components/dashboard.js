@@ -69,7 +69,7 @@ function Dashboard() {
     //     }
     // }
     //   const thumbStudTrue = knives.filter(i => i.thumbStud === true);
-    
+
     const MyKnives = knives.map((i) =>
         <table className='container tableBackground showStopper'>
             <thead>
@@ -104,7 +104,7 @@ function Dashboard() {
 
 
 
-                
+
 
 
 
@@ -141,14 +141,23 @@ function Dashboard() {
             <br></br>
             <br></br>
             <br></br>
-            <ul>
-            <li className='aboutStyling'><Link to="/about">About</Link></li>
-            <li className='contactStyling'><Link to="/contact">Contact</Link></li>
-          </ul>
+            <br></br>
+            <br></br>
+            <br></br>
+            <AboutContactStyling>
+                <ul>
+                    <li className='aboutStyling'><Link to="/about">About</Link></li>
+                    <li className='contactStyling'><Link to="/contact">Contact</Link></li>
+                </ul>
+            </AboutContactStyling>
 
         </>
     )
 }
+
+const AboutContactStyling = styled.div`
+text-shadow: 2px 2px 2px grey;
+`
 
 const DropdownStyling = styled.div`
 text-align: center;

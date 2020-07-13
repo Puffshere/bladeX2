@@ -71,7 +71,7 @@ function BladeDetails() {
                 <div className='card-body'>
                     <div className='container'>
                         {<MyKnives />}
-                        <Link className='detailsStyling' to='/'>Return to DashBoard</Link>
+                        <Link className='detailsStyling' to='/dashboard'>Return to DashBoard</Link>
                     </div>
                 </div>
             </div>

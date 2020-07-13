@@ -64,7 +64,7 @@ function AddKnifeModal() {
                 <input placeholder='steel' name='steel' onChange={(e) => onChange(e)} />
                 <input placeholder='handle material' name='handleMaterial' onChange={(e) => onChange(e)} />
                 <input placeholder='blade shape' name='bladeShape' onChange={(e) => onChange(e)} />
-                <BtnMargins className='row'><Link to='/'><BTN1>Home</BTN1></Link>
+                <BtnMargins className='row'><Link to='/dashboard'><BTN1>Home</BTN1></Link>
                     <BTN onClick={() => handleSubmit()}>Submit</BTN>
                 </BtnMargins>
                 <br></br>

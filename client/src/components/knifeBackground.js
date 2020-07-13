@@ -9,8 +9,8 @@ const KnifeBackground = () => {
                 <div className="heroImage">
                         <SignIn />
                     <div className="heroText">
-                        <h1>Welcome to BladeX</h1>
-                        <h3>Mangage your Collection</h3>
+                        <p>Welcome to BladeX</p>
+                        <p>Manage your Collection</p>
                     </div>
                 </div>
             </div>

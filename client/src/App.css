@@ -137,21 +137,7 @@ html {
     text-decoration: none;
   }
 
-  .signInStyling {
-    /* width: 75px; */
-    float: right;
-    padding-right: 20px;
-    text-shadow: .5px .5px .5px whitesmoke;
-    box-shadow: 2px 2px 2px rgb(68, 65, 65);
-    color: maroon;
-    cursor: pointer;
-    font-size: 25px;
-  }
-  
-  .signInStyling:hover {
-    color: rgb(51, 1, 1);
-    text-decoration: none;
-  }
+
   
   .nameLoggedInStyling {
     float: right;
@@ -866,7 +852,7 @@ html {
 }
 @media only screen and (max-width: 412px) {
   .heroImage {
-    height: 732px;
+    height: 823px;
   }
 }
 @media only screen and (max-width: 380px) {
@@ -897,8 +883,64 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 50px;
+  font-size: 60px;
 }
+                  @media only screen and (max-width: 1024px) {
+                    .heroText {
+                     font-size: 60px;
+                    }
+                  }
+                  @media only screen and (max-width: 1000px) {
+                    .heroText {
+                     font-size: 25px;
+                    }
+                  }
+                  @media only screen and (max-width: 800px) {
+                    .heroText {
+                     font-size: 40px;
+                    }
+                  }
+                  @media only screen and (max-width: 700px) {
+                    .heroText {
+                     font-size: 25px;
+                    }
+                  }
+
+.signInStyling {
+  float: right;
+  padding-right: 20px;
+  text-shadow: .5px .5px .5px whitesmoke;
+  box-shadow: 2px 2px 2px rgb(68, 65, 65);
+  color: maroon;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.signInStyling:hover {
+  color: rgb(51, 1, 1);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .signInStyling {
+   font-size: 60px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .signInStyling {
+   font-size: 25px;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .signInStyling {
+    font-size: 40px;
+  }
+}
+          @media only screen and (max-width: 700px) {
+            .signInStyling {
+              font-size: 25px;
+            }
+          }
  
 
 
