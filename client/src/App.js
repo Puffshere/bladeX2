@@ -16,14 +16,17 @@ import Assisted from './components/assisted';
 import Dashboard from './components/dashboard';
 import BladeDetails from './components/bladeDetails';
 import ThumbStud from './components/thumbStud';
-
+import About from './components/about';
+import Contact from './components/contact';
+import KnifeBackground from './components/knifeBackground';
+import KnifeImage from './components/knifeImage';
 
 function App() {
   return (
     <Router>
       <main>
         <Switch>
-          <Route path="/" exact component={Dashboard} />
+          <Route path="/dashboard" exact component={Dashboard} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/forSale" component={ForSalePage} />
@@ -39,40 +42,22 @@ function App() {
           <Route path='/loginPage' component={LoginPage} />
           <Route path='/registerPage' component={RegisterPage} />
           <Route path='/thumbStud' component={ThumbStud} />
+          <Route path='/' component={KnifeBackground} />
         </Switch>
         <nav>
           <br></br>
           <br></br>
           <br></br>
-          <ul>
-            <li className='homeStyling'><Link to="/">Home</Link></li>
-            <li className='aboutStyling'><Link to="/about">About</Link></li>
-            <li className='contactStyling'><Link to="/contact">Contact</Link></li>
-          </ul>
+         
         </nav>
       </main>
     </Router>
   );
 }
 
-const Home = () => (
-  <Fragment>
-    <h1>Home</h1>
-  </Fragment>
-);
 
-const About = () => (
-  <Fragment>
-    <h1>About</h1>
-    <h5>This is an app to help you track your knife collection.  Manage your inventory.  Track costs and sell your blades.</h5>
-  </Fragment>
-);
 
-const Contact = () => (
-  <Fragment>
-    <h1>Contact</h1>
-    <h5>Contact me at:  shawncurtistaylor@hotmail.com</h5>
-  </Fragment>
-);
+
+
 
 export default App;

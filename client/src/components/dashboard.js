@@ -8,6 +8,7 @@ import SignOut from './signOut';
 import CurrentDate from './currentDate';
 import KnifeImage from './knifeImage';
 import NameLoggedIn from './nameLoggedIn';
+import KnifeBackground from './knifeBackground';
 
 
 function Dashboard() {
@@ -99,6 +100,14 @@ function Dashboard() {
     return (
         <>
             <div className='dashboard'>
+
+
+
+
+                
+
+
+
                 <KnifeImage />
                 <SignOut />
                 <NameLoggedIn />
@@ -129,6 +138,13 @@ function Dashboard() {
                 </tbody>
             </table>
             {MyKnives}
+            <br></br>
+            <br></br>
+            <br></br>
+            <ul>
+            <li className='aboutStyling'><Link to="/about">About</Link></li>
+            <li className='contactStyling'><Link to="/contact">Contact</Link></li>
+          </ul>
 
         </>
     )

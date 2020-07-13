@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SignOut = (props) => {
     return (
-        <Link to='loginPage'><div className='signOutStyling'>Sign Out</div></Link>
+        <Link to='/'><div className='signOutStyling'>Sign Out</div></Link>
     )
 }
 

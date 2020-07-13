@@ -136,6 +136,22 @@ html {
     color: rgb(51, 1, 1);
     text-decoration: none;
   }
+
+  .signInStyling {
+    /* width: 75px; */
+    float: right;
+    padding-right: 20px;
+    text-shadow: .5px .5px .5px whitesmoke;
+    box-shadow: 2px 2px 2px rgb(68, 65, 65);
+    color: maroon;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .signInStyling:hover {
+    color: rgb(51, 1, 1);
+    text-decoration: none;
+  }
   
   .nameLoggedInStyling {
     float: right;
@@ -818,9 +834,72 @@ html {
 
 
  
-  
- 
+  .heroImage {
+    background-image: url('./components/gerberFixedBlade.jpg');
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
+@media only screen and (max-width: 1024px) {
+  .heroImage {
+   height: 1366px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .heroImage {
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .heroImage {
+    height: 1024px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .heroImage {
+    height: 737px;
+  }
+}
+@media only screen and (max-width: 412px) {
+  .heroImage {
+    height: 732px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .heroImage {
+    height: 667px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .heroImage {
+    height: 812px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .heroImage {
+    height: 640px;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .heroImage {
+    height: 568px;
+  }
+}
+
+.heroText {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+}
+ 
 
 
 
