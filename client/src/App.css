@@ -852,7 +852,7 @@ html {
 }
 @media only screen and (max-width: 412px) {
   .heroImage {
-    height: 823px;
+    height: 755px;
   }
 }
 @media only screen and (max-width: 380px) {
@@ -862,7 +862,7 @@ html {
 }
 @media only screen and (max-width: 375px) {
   .heroImage {
-    height: 715px;
+    height: 812px;
   }
 }
 @media only screen and (max-width: 360px) {
