@@ -38,6 +38,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use('/api/adduser', require('./routes/addUser'));
 app.use('/api/getknives', require('./routes/getKnives'));
 app.use('/api/addNewKnife', require('./routes/addNewKnife'));
+app.use('/api/addForSale', require('./routes/addForSale'));
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}.`);

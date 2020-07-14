@@ -9,6 +9,15 @@ import { Link } from 'react-router-dom';
 
 function AddKnifeModal() {
 
+    const KnifeBackground = () => {
+        return (
+                <div className="">
+                    <div className="heroImage">
+                    </div>
+                </div>
+        )
+    }
+
     const [knives, setKnives] = useState([]);
     const [noKnives, setNoKnives] = useState('');
 
@@ -52,7 +61,8 @@ function AddKnifeModal() {
 
     return (
         <>
-            <Wrapper>
+        <KnifeBackground />
+            <Wrapper className='addModalMargins'>
                 <Title>Add a Blade!</Title>
                 <DateStyling><CurrentDate date={Date()} /></DateStyling>
                 <DropdownStyling>
@@ -140,11 +150,11 @@ const Wrapper = styled.div`
     }
     display: block;
     width: 300px;
-    margin: 0 auto;
     box-shadow: 5px 5px 5px 5px #330000;
     border-radius: 8px;
-    margin-top: 20px;
     background-color: floralwhite;
+    margin-left: auto;
+    margin-right: auto;
 `
 
 export default AddKnifeModal;

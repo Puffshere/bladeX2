@@ -1,13 +1,10 @@
 const express = require('express');
 const router = express.Router();
-
 const User = require('../models/User');
+
 
 router.post('/', (req, res) => {
   const { firstname, lastname, email, password, brand, model, price, steel, handleMaterial, bladeShape } = req.body;
-
-  User.findOne({ email }).then(user => {
-    if (user) return res.status(400).json({ msg: 'User already exists' });
 
     const newUser = new User({
       firstname,
@@ -26,7 +23,6 @@ router.post('/', (req, res) => {
       ]
     });
     newUser.save()
-  });
 });
 
 module.exports = router;

@@ -8,13 +8,17 @@ import SignOut from './signOut';
 import CurrentDate from './currentDate';
 import KnifeImage from './knifeImage';
 import NameLoggedIn from './nameLoggedIn';
-import KnifeBackground from './knifeBackground';
 
 
 function Dashboard() {
 
     const [knives, setKnives] = useState([]);
     const [noKnives, setNoKnives] = useState('');
+
+
+    const [state, setState] = useState({
+        forSale: true,
+    })
 
     useEffect(() => {
         const knivesRequest = {
@@ -27,6 +31,26 @@ function Dashboard() {
             setKnives(res.data.knives);
         })
     })
+
+    const handleSubmit = () => {
+        axios
+            .post('/api/addForSale', state)
+            .then(res => {
+                console.log('successfully added new knife for sale!')
+            })
+            .catch(err => console.log(err, 'failed to add new knife for sale'));
+        setState({
+            forSale: state
+        })
+    }
+
+    const onChange = () => {
+        setState({
+            ...state,
+            forSale: !state.forSale
+        });
+        console.log(state);
+    };
 
     // const MyKnives = () => {
     //     if (knives.length > 0) {
@@ -86,8 +110,11 @@ function Dashboard() {
                     </Link>
                     <td className='show2'>
                         <checkbox>
-                            <div class="checkbox-example checkMargins">
-                                <input type="checkbox" value="1" id="checkboxOneInput" />
+                            <div className="checkbox-example checkMargins">
+                                <input type="checkbox"
+                                 value="1" 
+                                 id="checkboxOneInput" onChange={() => onChange()}
+                                  />
                                 <label for="checkboxOneInput"></label>
                             </div>
                         </checkbox>
@@ -100,14 +127,6 @@ function Dashboard() {
     return (
         <>
             <div className='dashboard'>
-
-
-
-
-
-
-
-
                 <KnifeImage />
                 <SignOut />
                 <NameLoggedIn />
@@ -141,6 +160,7 @@ function Dashboard() {
             <br></br>
             <br></br>
             <br></br>
+            {/* <button onClick={() => handleSubmit()}>Update Collection</button> */}
             <br></br>
             <br></br>
             <br></br>
@@ -150,7 +170,6 @@ function Dashboard() {
                     <li className='contactStyling'><Link to="/contact">Contact</Link></li>
                 </ul>
             </AboutContactStyling>
-
         </>
     )
 }

@@ -817,8 +817,6 @@ html {
       padding-right: 20px;
     }
   }
-
-
  
   .heroImage {
     background-image: url('./components/gerberFixedBlade.jpg');
@@ -827,7 +825,8 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    /* position: relative; */
+    z-index: -1;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -872,7 +871,8 @@ html {
 }
 @media only screen and (max-width: 330px) {
   .heroImage {
-    height: 568px;
+    height: 577px;
+    width: 325px;
   }
 }
 
@@ -883,7 +883,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 50px;
+  font-size: 40px;
 }
                   @media only screen and (max-width: 1024px) {
                     .heroText {
@@ -909,11 +909,11 @@ html {
 .signInStyling {
   float: right;
   padding-right: 20px;
-  text-shadow: .5px .5px .5px whitesmoke;
-  box-shadow: 2px 2px 2px rgb(68, 65, 65);
+  text-shadow: 2px 2px 55px whitesmoke;
+  /* box-shadow: 2px 2px 2px rgb(68, 65, 65); */
   color: maroon;
   cursor: pointer;
-  font-size: 35px;
+  font-size: 33px;
 }
 
 .signInStyling:hover {
@@ -942,13 +942,6 @@ html {
             }
           }
  
-
-
-
-
-
-
-
   a:hover {
     text-decoration: none;
   }
@@ -985,4 +978,50 @@ background-color: whitesmoke;
 
 .contactStyling {
 background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 1024px) {
+  .addModalMargins {
+   margin-top: -900px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .addModalMargins {
+    margin-top: -470px;
+  }
+}
+@media only screen and (max-width: 775px) {
+  .addModalMargins {
+    margin-top: -735px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .addModalMargins {
+    margin-top: -580px;
+  }
+}
+@media only screen and (max-width: 412px) {
+  .addModalMargins {
+    margin-top: -620px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .addModalMargins {
+    margin-top: -525px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .addModalMargins {
+    margin-top: -685px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .addModalMargins {
+    margin-top: -525px;;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .addModalMargins {
+    margin-top: -525px;;
+  }
 }
