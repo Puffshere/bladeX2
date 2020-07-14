@@ -909,8 +909,7 @@ html {
 .signInStyling {
   float: right;
   padding-right: 20px;
-  text-shadow: 2px 2px 55px whitesmoke;
-  /* box-shadow: 2px 2px 2px rgb(68, 65, 65); */
+  text-shadow: 2px 2px 5px whitesmoke;
   color: maroon;
   cursor: pointer;
   font-size: 33px;
