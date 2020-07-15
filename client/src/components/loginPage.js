@@ -35,7 +35,6 @@ class LoginPage extends Component {
           <br></br>
           <div>
           <Link to='/dashboard'><button className='loginButton'>Login</button></Link>
-            {/* <button className='loginButton'>Dashboard</button> */}
           </div>
           <br></br>
         </form>
