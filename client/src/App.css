@@ -130,6 +130,8 @@ html {
     box-shadow: 2px 2px 2px rgb(68, 65, 65);
     color: maroon;
     cursor: pointer;
+    position: relative;
+    z-index: 6;
   }
   
   .signOutStyling:hover {
