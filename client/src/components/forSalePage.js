@@ -49,7 +49,7 @@ function ForSalePage() {
         <h3 className='dashboardTitle2'>ForSale</h3>
       </div>
       <p className='costOfcollection'>Amount for Sale:  </p>
-      <p className='costOfCollectNum'>$25.00</p>
+      <p className='costOfCollectNum'>$99.99</p>
       <Table className='tableStyling' />
       <center><h2 className='allKnivesStyling'>Knives for Sale:</h2></center>
       <br></br>
