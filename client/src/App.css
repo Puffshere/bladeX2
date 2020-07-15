@@ -1038,6 +1038,7 @@ background-color: whitesmoke;
   background-size: cover;
   position: fixed;
   z-index: -1;
+  opacity: 50%;
 }
 
 .aboutHeader {
