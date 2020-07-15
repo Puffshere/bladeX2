@@ -1030,6 +1030,7 @@ background-color: whitesmoke;
 }
 
 .aboutPic {
+  opacity: 25%;
   background-image: url('/knifecollection1.jpg');
   height: 100%;
   width: 1024px;
@@ -1038,7 +1039,6 @@ background-color: whitesmoke;
   background-size: cover;
   position: fixed;
   z-index: -1;
-  opacity: 26%;
 }
 
 .aboutHeader {
