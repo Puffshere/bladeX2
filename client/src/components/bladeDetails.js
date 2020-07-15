@@ -42,7 +42,7 @@ function BladeDetails() {
                     {knives.map(knife => {
                         return (
                             <div className='row'>
-                                <img className='detail col-5 mt-3 mb-3' src="knife4.jpg"></img>
+                                <img className='detail col-5 mt-3 mb-3' src="benchmadeBugoutBrown.jpg"></img>
                                 <div className='col-7 mt-3 mb-3'>
                                     <h2 className='title'>{knife.brand}</h2>
                                     <h2 className='title'>{knife.model}</h2>

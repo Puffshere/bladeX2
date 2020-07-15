@@ -17,13 +17,13 @@ function Dashboard() {
 
 
     const [state, setState] = useState({
-        forSale: true,
+        forSale: false,
     })
 
     useEffect(() => {
         const knivesRequest = {
             userId: '5f0587584f6e92c4ce549a24'
-        }
+                }
         axios.post('https://bladexapp.herokuapp.com/api/getKnives', knivesRequest).then(res => {
             if (res.data.knives.length < 0) {
                 setNoKnives('You need to go buy some knives.');
@@ -49,7 +49,6 @@ function Dashboard() {
             ...state,
             forSale: !state.forSale
         });
-        console.log(state);
     };
 
     // const MyKnives = () => {
@@ -111,10 +110,13 @@ function Dashboard() {
                     <td className='show2'>
                         <checkbox>
                             <div className="checkbox-example checkMargins">
-                                <input type="checkbox"
-                                 value="1" 
-                                 id="checkboxOneInput" onChange={() => onChange()}
-                                  />
+                                <input type="checkbox" 
+                                    key={i._id}
+                                checked={i.forSale}
+                                 id="checkboxOneInput"
+                                   onChange={() => onChange()} 
+                                   onClick={() => handleSubmit()}>
+                                     </input>
                                 <label for="checkboxOneInput"></label>
                             </div>
                         </checkbox>
@@ -138,7 +140,7 @@ function Dashboard() {
                     <h3 className='dashboardTitle'>Dashboard</h3>
                 </div>
                 <p className='costOfcollection'>Cost of Collection:  </p>
-                <p className='costOfCollectNum'>$59.99</p>
+                <p className='costOfCollectNum'>$109.99</p>
                 <Table className='tableStyling' />
             </div>
             <Title>My Blades</Title>
@@ -160,7 +162,7 @@ function Dashboard() {
             <br></br>
             <br></br>
             <br></br>
-            {/* <button onClick={() => handleSubmit()}>Update Collection</button> */}
+            {/* <button onClick={() => handleSubmit()}>Update Collection</button>  */}
             <br></br>
             <br></br>
             <br></br>
