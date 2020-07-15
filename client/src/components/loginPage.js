@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
 
-
 class LoginPage extends Component {
   
   onHandleLogin = (event) => {
@@ -35,7 +34,8 @@ class LoginPage extends Component {
           </div>
           <br></br>
           <div>
-            <button className='loginButton'>Login</button>
+          <Link to='/dashboard'><button className='loginButton'>Login</button></Link>
+            {/* <button className='loginButton'>Dashboard</button> */}
           </div>
           <br></br>
         </form>
