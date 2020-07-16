@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 
 function BladeDetails() {
@@ -48,6 +49,7 @@ function BladeDetails() {
                                     <h2 className='title'>{knife.model}</h2>
                                     <p>Price:  ${knife.price}</p>
                                     <h6 className='metascore'>For Sale Price:  </h6>
+                                    <SaleAmount>$99.99</SaleAmount>
                                     <hr></hr>
                                     <p>Steel:  {knife.steel}</p>
                                     <p>Handle Material:  {knife.handleMaterial}</p>
@@ -78,5 +80,10 @@ function BladeDetails() {
         </div>
     )
 }
+
+const SaleAmount = styled.p`
+color: maroon;
+padding-left: 5em
+`
 
 export default BladeDetails
