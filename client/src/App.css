@@ -971,10 +971,12 @@ background-color: whitesmoke;
 
 .aboutStyling {
 background-color: whitesmoke;
+text-shadow: 2px 2px 2px grey;
 }
 
 .contactStyling {
 background-color: whitesmoke;
+text-shadow: 2px 2px 2px grey;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1161,10 +1163,11 @@ padding: 5px;
 .linkStyling {
   color: rgba(70, 70, 70, 0.39);
   background-color: currentcolor;
-  margin-top: 340px;
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
   .linkStyling {
    margin-top: 899px;
    font-size: 30px;
@@ -1202,7 +1205,7 @@ padding: 5px;
 }
 @media only screen and (max-width: 380px) {
   .linkStyling {
-    margin-top: 360px;
+    margin-top: 340px;
   }
 }
 @media only screen and (max-width: 375px) and (max-height: 850px) {
@@ -1226,4 +1229,4 @@ padding: 5px;
   .linkStyling {
     margin-top: 273px;
   }
-}
+} */

@@ -13,7 +13,7 @@ const Contact = () => (
       <div className='linkStyling'>
     <ul>
     <li className='homeStyling'><Link to="/dashboard">Home</Link></li>
-    <li className='aboutStyling'><Link to="/contact">About</Link></li>
+    <li className='aboutStyling'><Link to="/about">About</Link></li>
     </ul>
     </div>
     </Fragment>

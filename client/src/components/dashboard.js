@@ -23,7 +23,7 @@ function Dashboard() {
     useEffect(() => {
         const knivesRequest = {
             userId: '5f0587584f6e92c4ce549a24'
-                }
+        }
         axios.post('https://blade-x.herokuapp.com/api/getKnives', knivesRequest).then(res => {
             if (res.data.knives.length < 0) {
                 setNoKnives('You need to go buy some knives.');
@@ -110,13 +110,13 @@ function Dashboard() {
                     <td className='show2'>
                         <checkbox>
                             <div className="checkbox-example checkMargins">
-                                <input type="checkbox" 
+                                <input type="checkbox"
                                     key={i._id}
-                                checked={i.forSale}
-                                 id="checkboxOneInput"
-                                   onChange={() => onChange()} 
-                                   onClick={() => handleSubmit()}>
-                                     </input>
+                                    checked={i.forSale}
+                                    id="checkboxOneInput"
+                                    onChange={() => onChange()}
+                                    onClick={() => handleSubmit()}>
+                                </input>
                                 <label for="checkboxOneInput"></label>
                             </div>
                         </checkbox>
@@ -166,19 +166,17 @@ function Dashboard() {
             <br></br>
             <br></br>
             <br></br>
-            <AboutContactStyling>
+            <div className='linkStyling'>
                 <ul>
                     <li className='aboutStyling'><Link to="/about">About</Link></li>
                     <li className='contactStyling'><Link to="/contact">Contact</Link></li>
                 </ul>
-            </AboutContactStyling>
+            </div>
         </>
     )
 }
 
-const AboutContactStyling = styled.div`
-text-shadow: 2px 2px 2px grey;
-`
+
 
 const DropdownStyling = styled.div`
 text-align: center;
