@@ -49,7 +49,7 @@ function BladeDetails() {
                                     <h2 className='title'>{knife.model}</h2>
                                     <p>Price:  ${knife.price}</p>
                                     <h6 className='metascore'>For Sale Price:  </h6>
-                                    <SaleAmount>$99.99</SaleAmount>
+                                    <SaleAmount>${knife.forSalePrice}</SaleAmount>
                                     <hr></hr>
                                     <p>Steel:  {knife.steel}</p>
                                     <p>Handle Material:  {knife.handleMaterial}</p>

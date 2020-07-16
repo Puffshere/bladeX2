@@ -167,7 +167,7 @@ function Dashboard() {
             <br></br>
             <br></br>
             <footer>
-                <div className='linkStyling1'>
+                <div className='linkStyling1 linkStyling'>
                     <ul>
                         <li className='aboutStyling'><Link to="/about">About</Link></li>
                         <li className='contactStyling'><Link to="/contact">Contact</Link></li>

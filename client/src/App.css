@@ -1165,10 +1165,11 @@ padding: 5px;
   background-color: currentcolor;
 }
 
-.linkStyling {
+.linkStyling2 {
   color: rgba(70, 70, 70, 0.39);
   background-color: currentcolor;
 }
+
 @media only screen and (max-width: 1024px) {
   .linkStyling {
    font-size: 30px;
