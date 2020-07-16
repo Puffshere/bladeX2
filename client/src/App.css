@@ -972,7 +972,6 @@ html {
 
 .homeStyling {
 background-color: whitesmoke;
-/* opacity: 99% */
 }
 
 .aboutStyling {
@@ -1038,7 +1037,7 @@ background-color: whitesmoke;
   background-size: cover;
   position: fixed;
   z-index: -1;
-  /* opacity: 25%; */
+  opacity: .25;
 }
 
 .aboutHeader {
