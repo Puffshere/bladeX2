@@ -166,12 +166,15 @@ function Dashboard() {
             <br></br>
             <br></br>
             <br></br>
-            <div className='linkStyling'>
-                <ul>
-                    <li className='aboutStyling'><Link to="/about">About</Link></li>
-                    <li className='contactStyling'><Link to="/contact">Contact</Link></li>
-                </ul>
-            </div>
+            <footer>
+                <div className='linkStyling'>
+                    <ul>
+                        <li className='aboutStyling'><Link to="/about">About</Link></li>
+                        <li className='contactStyling'><Link to="/contact">Contact</Link></li>
+                    </ul>
+                </div>
+            </footer>
+
         </>
     )
 }

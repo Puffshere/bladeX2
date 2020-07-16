@@ -10,12 +10,14 @@ const Contact = () => (
       <br></br>
       <br></br>
       <br></br>
+      <footer>
       <div className='linkStyling'>
     <ul>
     <li className='homeStyling'><Link to="/dashboard">Home</Link></li>
     <li className='aboutStyling'><Link to="/about">About</Link></li>
     </ul>
     </div>
+    </footer>
     </Fragment>
   );
 
