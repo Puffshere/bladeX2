@@ -36,9 +36,10 @@ html {
   }
   
   .dashboardTitle {
-    text-shadow: .5px .5px .5px whitesmoke;
-    background-color: rgb(199, 179, 179);
+    text-shadow: 0.5px 0.5px 0.5px whitesmoke;
+    background-color: maroon;
     box-shadow: 2px 2px 2px rgb(68, 65, 65);
+    color: dimgrey;
   } 
   
   .dashboardTitle1 {
@@ -52,6 +53,13 @@ html {
     text-shadow: .5px .5px .5px whitesmoke;
     background-color: rgb(199, 179, 179);
     box-shadow: 2px 2px 2px rgb(68, 65, 65);
+  } 
+
+  .dashboardTitle3 {
+    text-shadow: .5px .5px .5px whitesmoke;
+    background-color: rgb(199, 179, 179);
+    box-shadow: 2px 2px 2px rgb(68, 65, 65);
+    margin-bottom: 15px;
   }  
   
   .forSaleTitle {
@@ -75,6 +83,10 @@ html {
     margin: auto;
     background-color: floralwhite;
     width: 100%;
+  }
+
+  .tableStylingEdc {
+    margin-top: 10px;
   }
   
   .dashboardTableHeadStyling {
@@ -944,12 +956,12 @@ html {
   }
 
   .handleStyling {
-    max-width: 30px;
+    max-width: 40px;
   }
 
   .brandMargins {
     padding-left: 20px;
-    max-width: 45px;
+    max-width: 50px;
   }
 
   a {
@@ -1227,4 +1239,15 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+header {
+  background-image: url('/reeves.jpg');
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.w {
+  margin-top: 110px;
 }

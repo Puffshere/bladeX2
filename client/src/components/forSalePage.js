@@ -3,6 +3,7 @@ import SignOut from '../components/signOut';
 import Table from '../components/table';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import KnifeImage from './knifeImage';
 
 
 function ForSalePage() {
@@ -40,6 +41,7 @@ function ForSalePage() {
 
   return (
     <div className='dashboard'>
+      <KnifeImage />
       <SignOut />
       <div className='column1'>
         <h1 className='loginPageTitle'>BladeX</h1>

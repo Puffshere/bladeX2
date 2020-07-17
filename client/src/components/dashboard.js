@@ -6,7 +6,6 @@ import './style.css';
 import Table from './table';
 import SignOut from './signOut';
 import CurrentDate from './currentDate';
-import KnifeImage from './knifeImage';
 import NameLoggedIn from './nameLoggedIn';
 
 
@@ -14,8 +13,6 @@ function Dashboard() {
 
     const [knives, setKnives] = useState([]);
     const [noKnives, setNoKnives] = useState('');
-
-
     const [state, setState] = useState({
         forSale: false,
     })
@@ -128,44 +125,48 @@ function Dashboard() {
 
     return (
         <>
-            <div className='dashboard'>
-                <KnifeImage />
-                <SignOut />
-                <NameLoggedIn />
-                <div className='column1'>
-                    <h1 className='loginPageTitle'>BladeX</h1>
-                    <div className='dateStyling2'>
-                        <CurrentDate date={Date()} />
+            <header>
+                <div className='dashboard'>
+                    <SignOut />
+                    <NameLoggedIn />
+                    <div className='column1'>
+                        <h1 className='loginPageTitle'>BladeX</h1>
+                        <DateStyling><div className=''>
+                            <CurrentDate date={Date()} />
+                        </div>
+                        </DateStyling>
+                        <h3 className='dashboardTitle'>Dashboard</h3>
                     </div>
-                    <h3 className='dashboardTitle'>Dashboard</h3>
+                    <p className='costOfcollection'>Cost of Collection:  </p>
+                    <p className='costOfCollectNum'>$109.99</p>
+                    <Table className='tableStyling' />
                 </div>
-                <p className='costOfcollection'>Cost of Collection:  </p>
-                <p className='costOfCollectNum'>$109.99</p>
-                <Table className='tableStyling' />
+            </header>
+            <div className='w'>
+                <Title>My Blades</Title>
+                <br></br>
+                <table className='container tableMargins tableHeader'>
+                    <tbody>
+                        <tr>
+                            <td className='brandMargins'>Brand</td>
+                            <td className=''>Model</td>
+                            <td className=''>Price</td>
+                            <td className=''>Steel</td>
+                            <td className='handleStyling'>Handle</td>
+                            <td className=''>Blade</td>
+                            <td className=''>Sale</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {MyKnives}
+                <br></br>
+                <br></br>
+                <br></br>
+                {/* <button onClick={() => handleSubmit()}>Update Collection</button>  */}
+                <br></br>
+                <br></br>
+                <br></br>
             </div>
-            <Title>My Blades</Title>
-            <br></br>
-            <table className='container tableMargins tableHeader'>
-                <tbody>
-                    <tr>
-                        <td className='brandMargins'>Brand</td>
-                        <td className=''>Model</td>
-                        <td className=''>Price</td>
-                        <td className=''>Steel</td>
-                        <td className='handleStyling'>Handle</td>
-                        <td className=''>Blade</td>
-                        <td className=''>Sale</td>
-                    </tr>
-                </tbody>
-            </table>
-            {MyKnives}
-            <br></br>
-            <br></br>
-            <br></br>
-            {/* <button onClick={() => handleSubmit()}>Update Collection</button>  */}
-            <br></br>
-            <br></br>
-            <br></br>
             <footer>
                 <div className='linkStyling1 linkStyling'>
                     <ul>
@@ -174,21 +175,18 @@ function Dashboard() {
                     </ul>
                 </div>
             </footer>
-
         </>
     )
 }
-
-
 
 const DropdownStyling = styled.div`
 text-align: center;
 `
 
-const DateStyling = styled.h5`
-    color: maroon;
-    text-align: center;
-    margin-top: 1px;
+const DateStyling = styled.div`
+    color: rgb(60, 145, 179);
+    text-shadow: 1px 1px 1px 1px whitesmoke;
+    background-color: black;
 `
 
 const Title = styled.div`

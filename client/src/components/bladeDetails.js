@@ -9,7 +9,6 @@ function BladeDetails() {
 
     const [knives, setKnives] = useState([]);
     const [noKnives, setNoKnives] = useState('');
-
     const [state, setState] = useState({
         firstname: '',
         lastname: '',

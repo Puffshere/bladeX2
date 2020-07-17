@@ -3,6 +3,7 @@ import SignOut from '../components/signOut';
 import Table from '../components/table';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import KnifeImage from './knifeImage';
 
 
 function Flippers() {
@@ -41,13 +42,14 @@ function Flippers() {
 
   return (
     <div className='dashboard'>
+      <KnifeImage />
       <SignOut />
       <div className='column1'>
         <h1 className='loginPageTitle'>BladeX</h1>
         <div className='dateStyling'>
           <CurrentDate date={Date()} />
         </div>
-        <h3 className='dashboardTitle2'>Flippers</h3>
+        <h3 className='dashboardTitle3'>Flippers</h3>
       </div>
       <Table className='tableStyling' />
       <center><h2 className='allKnivesStyling'>Flippers:</h2></center>
