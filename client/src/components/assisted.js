@@ -7,7 +7,6 @@ import KnifeImage from './knifeImage';
 
 
 function Assisted() {
-
   const [knives, setKnives] = useState([]);
   const [noKnives, setNoKnives] = useState('');
 

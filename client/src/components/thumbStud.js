@@ -7,7 +7,6 @@ import KnifeImage from './knifeImage';
 
 
 function ThumbStud() {
-
   const [knives, setKnives] = useState([]);
   const [noKnives, setNoKnives] = useState('');
 
