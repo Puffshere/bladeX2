@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 
 function AddKnifeModal() {
-
     const KnifeBackground = () => {
         return (
                 <div className="">
@@ -17,10 +16,8 @@ function AddKnifeModal() {
                 </div>
         )
     }
-
     const [knives, setKnives] = useState([]);
     const [noKnives, setNoKnives] = useState('');
-
     const [state, setState] = useState({
         firstname: '',
         lastname: '',
