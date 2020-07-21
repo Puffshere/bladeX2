@@ -31,10 +31,10 @@ function WishList() {
       </thead>
       <tbody>
         <tr>
-          <td className='show1 shane'>{i.brand}</td>
-          <td className='show1 shane'>{i.model}</td>
-          <td className='show1 shane'>{i.bladeShape}</td>
-          <td className='show1 shane'>{i.handleMaterial}</td>
+          <td className='maroon'>{i.brand}</td>
+          <td className='maroon'>{i.model}</td>
+          <td className='maroon'>{i.bladeShape}</td>
+          <td className='maroon'>{i.handleMaterial}</td>
         </tr>
       </tbody>
     </table>

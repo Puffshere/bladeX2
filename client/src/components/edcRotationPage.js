@@ -31,10 +31,10 @@ function Edc() {
       </thead>
       <tbody>
         <tr>
-          <td className='show1 shane'>{i.brand}</td>
-          <td className='show1 shane'>{i.model}</td>
-          <td className='show1 shane'>{i.bladeShape}</td>
-          <td className='show1 shane'>{i.handleMaterial}</td>
+          <td className='maroon c'>{i.brand}</td>
+          <td className='maroon c'>{i.model}</td>
+          <td className='maroon c'>{i.bladeShape}</td>
+          <td className='maroon c'>{i.handleMaterial}</td>
         </tr>
       </tbody>
     </table>
@@ -57,10 +57,10 @@ function Edc() {
       <table className='container tableMargins tableHeader'>
         <tbody>
           <tr>
-            <td className=''>Brand</td>
-            <td className=''>Model</td>
-            <td className=''>Blade</td>
-            <td className=''>Handle</td>
+            <td className='c'>Brand</td>
+            <td className='c'>Model</td>
+            <td className='c'>Blade</td>
+            <td className='c'>Handle</td>
           </tr>
         </tbody>
       </table>

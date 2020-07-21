@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+
+
+
 const UserSchema = new Schema({
     // activated_token: {
     //     type: String, default: ""
@@ -97,5 +101,11 @@ const UserSchema = new Schema({
         }
     ],
 });
+
+exports.addKnife = function (req, res, next)
+{
+var knife = {"brand": req.body.brand, "model": req.body.model};
+Users.findOneAndUpdate({email: req.user.email}, {$push: {knives: knife}});
+};
 
 module.exports = User = mongoose.model('user', UserSchema);

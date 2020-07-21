@@ -21,7 +21,10 @@ import Contact from './components/contact';
 import KnifeBackground from './components/knifeBackground';
 import KnifeImage from './components/knifeImage';
 
+// App.get('/addknife', User.addKnife);
+
 function App() {
+  
   return (
     <Router>
       <main>
@@ -48,16 +51,11 @@ function App() {
           <br></br>
           <br></br>
           <br></br>
-         
         </nav>
       </main>
     </Router>
   );
 }
-
-
-
-
 
 
 export default App;

@@ -7,7 +7,6 @@ import KnifeImage from './knifeImage';
 
 
 function ForSalePage() {
-
   const [knives, setKnives] = useState([]);
   const [noKnives, setNoKnives] = useState('');
 
@@ -31,9 +30,9 @@ function ForSalePage() {
       </thead>
       <tbody>
         <tr>
-          <td className='show1 shane'>{i.brand}</td>
-          <td className='show1 shane'>{i.model}</td>
-          <td className='show1 shane'>${i.forSalePrice}</td>
+          <td className='maroon c'>{i.brand}</td>
+          <td className='maroon c'>{i.model}</td>
+          <td className='maroon c'>${i.forSalePrice}</td>
         </tr>
       </tbody>
     </table>
@@ -58,9 +57,9 @@ function ForSalePage() {
       <table className='container tableMargins tableHeader'>
         <tbody>
           <tr>
-            <td className=''>Brand</td>
-            <td className=''>Model</td>
-            <td className=''>Price</td>
+            <td className='c'>Brand</td>
+            <td className='c'>Model</td>
+            <td className='c'>Price</td>
           </tr>
         </tbody>
       </table>

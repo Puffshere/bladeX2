@@ -10,7 +10,6 @@ import NameLoggedIn from './nameLoggedIn';
 
 
 function Dashboard() {
-
     const [knives, setKnives] = useState([]);
     const [noKnives, setNoKnives] = useState('');
     const [state, setState] = useState({

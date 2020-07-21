@@ -1251,3 +1251,11 @@ header {
 .w {
   margin-top: 110px;
 }
+
+.maroon {
+  color: maroon;
+}
+
+.c {
+  max-width: 58px;
+}
