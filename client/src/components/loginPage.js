@@ -13,7 +13,7 @@ class LoginPage extends Component {
     const data = {
       email, password
     };
-  }
+  } 
   
   render() {
      
